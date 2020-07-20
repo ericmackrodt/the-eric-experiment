@@ -1,0 +1,3 @@
+import { Request, Response, NextFunction } from "express";
+import { BlogData } from "../types";
+export declare function post(blogData: BlogData): (req: Request, res: Response, next: NextFunction) => Promise<void>;

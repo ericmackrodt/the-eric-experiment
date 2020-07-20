@@ -1,0 +1,31 @@
+<table width="100%">
+  @model.posts.forEach(function (item) {
+    @{
+      var image = item.filename + "/" +item.image;
+    }
+    <tr>
+      <td rowspan="2" width="80">
+        <a href="/post/@item.filename">
+          <img
+            src="/img/80/80/@image?fit=cover"
+            width="80"
+            height="80"
+          />
+        </a>
+      </td>
+      <td>
+        <a href="/post/@item.filename">
+          <h3>@item.title</h3>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>@item.date</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <hr />
+      </td>
+    </tr>
+  })
+</table>

@@ -1,0 +1,17 @@
+@{
+  var categories = Object.keys(model.categories);
+  var tags = Object.keys(model.tags);
+}
+<h3>Categories</h3>
+<ul>
+  @categories.forEach(function (item) {
+    <li>@item</li>
+  })
+</ul>
+
+<h3>Tags</h3>
+<ul>
+  @tags.forEach(function (item) {
+    <li>@item</li>
+  })
+</ul>

@@ -1,0 +1,7 @@
+@html.extend('legacy/layout', function(model){
+	@html.block('content', function(model){
+		<h1>@model.metadata.title</h1>
+    <hr />
+    @html.raw(model.content)
+	})
+})
