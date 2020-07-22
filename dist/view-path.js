@@ -9,7 +9,7 @@ function viewPath(req, view) {
     if (userAgent.browser.toLowerCase() === "netscape") {
         return ["legacy", view].join("/");
     }
-    return ["legacy", view].join("/");
+    return ["modern", view].join("/");
 }
 exports.viewPath = viewPath;
 //# sourceMappingURL=view-path.js.map

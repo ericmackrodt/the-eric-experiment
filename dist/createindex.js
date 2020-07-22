@@ -64,25 +64,31 @@ function run() {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    normalizedPath = path.join(__dirname, "/contents/posts");
+                    normalizedPath = path.join(__dirname, "../contents/posts");
                     posts = fs.readdirSync(normalizedPath);
                     promises = posts.map(function (post) {
                         return new Promise(function (resolve, reject) {
+                            var postPath = path.join(normalizedPath, post, "post.md");
+                            var exists = fs.existsSync(postPath);
+                            if (!exists) {
+                                resolve();
+                                return;
+                            }
                             var lineReader = readline_1.createInterface({
-                                input: fs.createReadStream(path.join(normalizedPath, post)),
+                                input: fs.createReadStream(postPath),
                             });
                             var lineCounter = 0;
                             var lines = [];
                             lineReader.on("line", function (line) {
                                 lineCounter++;
                                 lines.push(line);
-                                if (lineCounter === 5) {
+                                if (lineCounter === 6) {
                                     lineReader.close();
                                 }
                             });
                             lineReader.on("close", function () {
                                 var result = yaml_1.parse(lines.join("\n\r"));
-                                resolve(__assign(__assign({}, result), { filename: path.basename(post, ".md") }));
+                                resolve(__assign(__assign({}, result), { filename: post }));
                             });
                             lineReader.on("error", function (err) {
                                 reject(err);
@@ -91,17 +97,30 @@ function run() {
                     });
                     return [4, Promise.all(promises)];
                 case 1:
-                    results = _a.sent();
+                    results = (_a.sent())
+                        .filter(function (o) { return !!o; })
+                        .map(function (item) { return ({
+                        categories: item.category.split(",").map(function (o) { return o.trim(); }),
+                        tags: item.tags.split(",").map(function (o) { return o.trim(); }),
+                        title: item.title,
+                        date: item.date,
+                        image: item.image,
+                        filename: item.filename,
+                        description: item.description,
+                    }); });
                     categories = {};
                     tags = {};
                     results.forEach(function (f) {
-                        var cat = categories[f.category];
-                        if (!cat) {
-                            cat = [];
-                        }
-                        categories[f.category] = __spreadArrays(cat, [f.filename]);
-                        var ts = f.tags.split(",");
-                        ts.forEach(function (t) {
+                        f.categories.forEach(function (key) {
+                            var t = key.trim();
+                            var category = categories[t];
+                            if (!category) {
+                                category = [];
+                            }
+                            categories[t] = __spreadArrays(category, [f.filename]);
+                        });
+                        f.tags.forEach(function (key) {
+                            var t = key.trim();
                             var tag = tags[t];
                             if (!tag) {
                                 tag = [];
@@ -109,9 +128,9 @@ function run() {
                             tags[t] = __spreadArrays(tag, [f.filename]);
                         });
                     });
-                    fs.writeFileSync(path.join(__dirname, "contents/tags.json"), JSON.stringify(tags));
-                    fs.writeFileSync(path.join(__dirname, "contents/categories.json"), JSON.stringify(categories));
-                    fs.writeFileSync(path.join(__dirname, "contents/posts.json"), JSON.stringify(results));
+                    fs.writeFileSync(path.join(__dirname, "../contents/tags.json"), JSON.stringify(tags));
+                    fs.writeFileSync(path.join(__dirname, "../contents/categories.json"), JSON.stringify(categories));
+                    fs.writeFileSync(path.join(__dirname, "../contents/posts.json"), JSON.stringify(results));
                     return [2];
             }
         });

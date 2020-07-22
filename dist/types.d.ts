@@ -7,11 +7,17 @@ export declare type PostMetadata = {
     categories: string[];
     image: string;
     filename: string;
+    description: string;
+};
+export declare type MainMenuItem = {
+    path: string;
+    lable: string;
 };
 export declare type BlogData = {
     tags: Tags;
     categories: Categories;
     posts: PostMetadata[];
+    mainMenu: MainMenuItem[];
 };
 export declare type HomeModel = BlogData & {};
 export declare type PageModel = {

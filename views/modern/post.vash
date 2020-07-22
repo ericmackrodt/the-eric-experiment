@@ -1,0 +1,41 @@
+@{
+	var image = model.metadata.filename + "/" + model.metadata.image;
+}
+
+@html.extend('modern/layout', function(model){
+	@html.block('seo', function(model) {
+		<meta name="description" content="@model.metadata.description">
+		<link rel="canonical" href="http://www.theericexperiment.com/post/@model.metadata.filename" />
+		<meta property="og:locale" content="en_AU" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="@model.metadata.title" />
+		<meta property="og:description" content="@model.metadata.description" />
+		<meta property="og:url" content="http://www.theericexperiment.com/post/@model.metadata.filename" />
+		<meta property="og:site_name" content="The Eric Experiment" />
+		<meta property="article:section" content="Blog" />
+		<meta property="article:published_time" content="@(model.metadata.date)T12:10:00+00:00" />
+		<meta property="article:modified_time" content="@(model.metadata.date)T10:05:01+00:00" />
+		<meta property="og:updated_time" content="@(model.metadata.date)T10:05:01+00:00" />
+		<meta property="og:image" content="http://www.theericexperiment.com/post/asset/143/80/@image?fit=cover" />
+		<meta property="og:image:secure_url" content="https://www.theericexperiment.com/post/asset/143/80/@image?fit=cover" />
+		<meta property="og:image:width" content="143" />
+		<meta property="og:image:height" content="80" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:description" content="@model.metadata.description" />
+		<meta name="twitter:title" content="@model.metadata.title" />
+		<meta name="twitter:image" content="https://www.theericexperiment.com/post/asset/143/80/@image?fit=cover" /> 
+	})
+
+	@html.block('content', function(model){
+		<h1>@model.metadata.title</h1>
+    <b>Published: </b>@model.metadata.date
+		<br />
+		<b>Tags: </b> @model.metadata.tags.forEach(function (item, index) {
+			@{
+				var isLast = index === (model.metadata.tags.length - 1);
+			}
+			<a href="/tag?id=@item">@item</a>@(isLast ? '' : ', ')
+		})
+    @html.raw(model.content)
+	})
+})

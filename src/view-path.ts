@@ -10,5 +10,5 @@ export function viewPath(req: Request, view: string) {
     return ["legacy", view].join("/");
   }
 
-  return ["legacy", view].join("/");
+  return ["modern", view].join("/");
 }

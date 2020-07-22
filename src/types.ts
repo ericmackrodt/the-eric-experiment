@@ -7,12 +7,19 @@ export type PostMetadata = {
   categories: string[];
   image: string;
   filename: string;
+  description: string;
+};
+
+export type MainMenuItem = {
+  path: string;
+  lable: string;
 };
 
 export type BlogData = {
   tags: Tags;
   categories: Categories;
   posts: PostMetadata[];
+  mainMenu: MainMenuItem[];
 };
 
 export type HomeModel = BlogData & {};

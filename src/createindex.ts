@@ -2,17 +2,26 @@ import * as fs from "fs";
 import * as path from "path";
 import { createInterface } from "readline";
 import { parse } from "yaml";
+import { PostMetadata } from "./types";
 
 async function run() {
-  var normalizedPath = path.join(__dirname, "/contents/posts");
+  var normalizedPath = path.join(__dirname, "../contents/posts");
 
   const posts = fs.readdirSync(normalizedPath);
 
   const promises = posts.map(
     (post) =>
       new Promise<any>((resolve, reject) => {
+        const postPath = path.join(normalizedPath, post, "post.md");
+        const exists = fs.existsSync(postPath);
+
+        if (!exists) {
+          resolve();
+          return;
+        }
+
         const lineReader = createInterface({
-          input: fs.createReadStream(path.join(normalizedPath, post)),
+          input: fs.createReadStream(postPath),
         });
 
         let lineCounter = 0;
@@ -21,7 +30,7 @@ async function run() {
         lineReader.on("line", (line) => {
           lineCounter++;
           lines.push(line);
-          if (lineCounter === 5) {
+          if (lineCounter === 6) {
             lineReader.close();
           }
         });
@@ -29,7 +38,7 @@ async function run() {
           const result = parse(lines.join("\n\r"));
           resolve({
             ...result,
-            filename: path.basename(post, ".md"),
+            filename: post,
           });
         });
         lineReader.on("error", (err) => {
@@ -38,20 +47,33 @@ async function run() {
       })
   );
 
-  const results = await Promise.all(promises);
+  const results: PostMetadata[] = (await Promise.all(promises))
+    .filter((o) => !!o)
+    .map((item) => ({
+      categories: item.category.split(",").map((o: string) => o.trim()),
+      tags: item.tags.split(",").map((o: string) => o.trim()),
+      title: item.title,
+      date: item.date,
+      image: item.image,
+      filename: item.filename,
+      description: item.description,
+    }));
 
   const categories: Record<string, string[]> = {};
   const tags: Record<string, string[]> = {};
 
   results.forEach((f) => {
-    let cat = categories[f.category];
-    if (!cat) {
-      cat = [];
-    }
-    categories[f.category] = [...cat, f.filename];
+    f.categories.forEach((key: string) => {
+      const t = key.trim();
+      let category = categories[t];
+      if (!category) {
+        category = [];
+      }
+      categories[t] = [...category, f.filename];
+    });
 
-    const ts = f.tags.split(",");
-    ts.forEach((t: any) => {
+    f.tags.forEach((key: string) => {
+      const t = key.trim();
       let tag = tags[t];
       if (!tag) {
         tag = [];
@@ -61,15 +83,15 @@ async function run() {
   });
 
   fs.writeFileSync(
-    path.join(__dirname, "contents/tags.json"),
+    path.join(__dirname, "../contents/tags.json"),
     JSON.stringify(tags)
   );
   fs.writeFileSync(
-    path.join(__dirname, "contents/categories.json"),
+    path.join(__dirname, "../contents/categories.json"),
     JSON.stringify(categories)
   );
   fs.writeFileSync(
-    path.join(__dirname, "contents/posts.json"),
+    path.join(__dirname, "../contents/posts.json"),
     JSON.stringify(results)
   );
 }

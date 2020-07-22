@@ -4,6 +4,6 @@ import { BlogData } from "../types";
 
 export function home(blogData: BlogData) {
   return async (req: Request, res: Response) => {
-    res.render(viewPath(req, "home"), blogData);
+    res.render(viewPath(req, "home"), { ...blogData, showSideContent: true });
   };
 }

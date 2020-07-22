@@ -9,20 +9,24 @@ import * as fs from "fs";
 import * as path from "path";
 import * as sharp from "sharp";
 import * as ua from "universal-analytics";
+import { category } from "./pages/category";
 import { home } from "./pages/home";
 import { page } from "./pages/page";
 import { post } from "./pages/post";
-import { Categories, PostMetadata, Tags } from "./types";
+import { tag } from "./pages/tag";
+import { Categories, MainMenuItem, PostMetadata, Tags } from "./types";
 
 const tags: Tags = require("../contents/tags.json");
 const categories: Categories = require("../contents/categories.json");
 const posts: PostMetadata[] = require("../contents/posts.json");
+const mainMenu: MainMenuItem[] = require("../contents/main-menu.json");
 
 const app = express();
 const port = process.env.PORT || 3001;
 
 app.set("view engine", "vash");
 
+app.use("/assets", express.static("assets"));
 app.use(cookieParser());
 app.set("trust proxy", 1); // trust first proxy
 app.use(useragent.express());
@@ -39,11 +43,13 @@ app.use(ua.middleware("blah", { cookieName: "_ga" }));
 
 app.use(urlencoded({ extended: true }));
 
-async function processImage(
-  req: Request,
-  data: Buffer,
-  fit: "fill" | "contain" | "cover" | "inside" | "outside" = "fill"
-) {
+async function processImage(req: Request, data: Buffer) {
+  const fit = req.query.fit as
+    | "fill"
+    | "contain"
+    | "cover"
+    | "inside"
+    | "outside";
   const width = parseInt(req.params.width);
   const height = parseInt(req.params.height);
   return sharp(data)
@@ -57,17 +63,25 @@ async function processImage(
     .toBuffer();
 }
 
+app.get("/post/asset/:width/:height/:id/*", async (req, res, next) => {
+  try {
+    const param = req.params[0];
+    const buffer = fs.readFileSync(
+      path.join(__dirname, "../contents/posts", req.params.id, param)
+    );
+    const result = await processImage(req, buffer);
+    res.type("jpg");
+    res.send(result);
+  } catch (_) {
+    next();
+  }
+});
+
 app.get("/img/:width/:height/*", async (req, res, next) => {
   try {
-    const fit = req.query.fit as
-      | "fill"
-      | "contain"
-      | "cover"
-      | "inside"
-      | "outside";
     const param = req.params[0];
     const buffer = fs.readFileSync(path.join(__dirname, "../assets", param));
-    const result = await processImage(req, buffer, fit);
+    const result = await processImage(req, buffer);
     res.type("jpg");
     res.send(result);
   } catch (_) {
@@ -83,9 +97,11 @@ app.get("/externalImage/:width/:height", async (req, res) => {
   res.send(result);
 });
 
-app.get("/", home({ tags, categories, posts }));
-app.get("/post/*", post({ tags, categories, posts }));
-app.get("/*", page);
+app.get("/", home({ tags, categories, posts, mainMenu }));
+app.get("/category", category({ tags, categories, posts, mainMenu }));
+app.get("/tag", tag({ tags, categories, posts, mainMenu }));
+app.get("/post/:id", post({ tags, categories, posts, mainMenu }));
+app.get("/*", page({ tags, categories, posts, mainMenu }));
 
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)

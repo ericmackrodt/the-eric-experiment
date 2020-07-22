@@ -1,0 +1,6 @@
+@html.extend('modern/layout', function(model){
+	@html.block('content', function(model){
+		<h2>@model.title</h2>
+		@html.extend('modern/post-list', function () {})
+	})
+})

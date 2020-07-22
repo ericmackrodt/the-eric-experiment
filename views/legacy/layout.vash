@@ -1,19 +1,33 @@
+@{
+  var columns = model.showSideContent ? 2 : 1;
+}
 <html>
 <head>
   <title>The Eric Experiment</title>
+  @html.block('seo')
 </head>
-<body bgcolor="#ffffff" text="#000000" topmargin="0" leftmargin="0" rightmargin="0">
+<body bgcolor="#000000" text="#000000" background="/assets/starfiel.gif">
 <center>
-  <table width="700">
+  <table width="700" bgcolor="#ffffff" cellspacing="4" cellpadding="0">
     <tr>
-      <td colspan="2">The Eric Experiment</td>
+      <td colspan="@columns">
+        <img src="/img/700/150/header.jpg" alt="The Eric Experiment" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="@columns" bgcolor="#1238B3">
+        @html.extend('legacy/top-menu', function () {})
+      </td>
     </tr>
     <tr>
       <td valign="top" width="500">
         @html.block('content')
       </td>
-      <td valign="top" width="200">
-        @html.extend('legacy/side-content', function() {})        
+      @(model.showSideContent ? html.extend('legacy/side-content', function() {}) : '')
+    </tr>
+    <tr>
+      <td colspan="@columns" align="center">
+        @html.extend('legacy/tags', function () {})
       </td>
     </tr>
   </table>

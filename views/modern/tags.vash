@@ -1,0 +1,16 @@
+@{
+  var tags = Object.keys(model.tags).map(o => ({
+    label: o,
+    count: model.tags[o].length
+  }));
+}
+<h3>Tags</h3>
+@tags.forEach(function (item, index) {
+  @{
+    var isLast = index === (tags.length - 1);
+  }
+  <a href="/tag?id=@item.label">
+    @item.label (@item.count)
+  </a>
+  @(isLast ? '' : ' | ')
+})

@@ -1,0 +1,13 @@
+<table cellspacing="0" cellpadding="4">
+  <tr>
+   @model.mainMenu.forEach(function (item) {
+      <td>
+        <a href="@item.path">
+          <font face="arial" color="#FFFFFF">
+            @item.label
+          </a>
+        </a>
+      </td>
+   })
+  </tr>
+</table>

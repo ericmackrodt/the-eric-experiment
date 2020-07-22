@@ -56,16 +56,27 @@ var marked = require("marked");
 function post(blogData) {
     var _this = this;
     return function (req, res, next) { return __awaiter(_this, void 0, void 0, function () {
-        var post_1, lines, metadata, content;
+        var post_1, lines, meta, metadata, content;
         return __generator(this, function (_a) {
             try {
                 post_1 = fs
-                    .readFileSync(path.join(__dirname, "../../contents/posts", req.params[0] + ".md"))
+                    .readFileSync(path.join(__dirname, "../../contents/posts", req.params.id, "post.md"))
                     .toString("utf-8");
                 lines = post_1.split("\n");
-                metadata = yaml_1.parse(lines.slice(0, 5).join("\n"));
+                meta = yaml_1.parse(lines.slice(0, 6).join("\n"));
+                metadata = {
+                    categories: meta.category.split(",").map(function (o) { return o.trim(); }),
+                    tags: meta.tags.split(",").map(function (o) { return o.trim(); }),
+                    title: meta.title,
+                    date: meta.date,
+                    image: meta.image,
+                    filename: req.params.id,
+                    description: meta.description,
+                };
+                console.log(metadata);
                 content = marked(lines.slice(5).join("\n"), {});
-                res.render(view_path_1.viewPath(req, "post"), __assign(__assign({}, blogData), { metadata: metadata, content: content }));
+                res.render(view_path_1.viewPath(req, "post"), __assign(__assign({}, blogData), { metadata: metadata,
+                    content: content, showSideContent: true }));
             }
             catch (ex) {
                 console.log(ex);

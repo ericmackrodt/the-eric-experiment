@@ -1,22 +1,30 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Blog</title>
+  <meta charset="UTF-8">
+  <title>The Eric Experiment</title>
+  <link rel="stylesheet" href="/assets/modern.css" />
+  <link rel="stylesheet" href="/assets/layout.css" />
+  @html.block('seo')
 </head>
-<body bgcolor="#ffffff" text="#000000" topmargin="0" leftmargin="0" rightmargin="0">
-<center>
-  <table width="700">
-    <tr>
-      <td colspan="2">The Eric Experiment (MODERN!)</td>
-    </tr>
-    <tr>
-      <td>
+<body>
+  <div id="root">
+      <div id="banner">
+      </div>
+      <div id="top-menu">
+        @html.extend('modern/top-menu', function () {})
+      </div>
+
+    <section id="page">
+      <div id="content">
         @html.block('content')
-      </td>
-      <td>
-        Side content
-      </td>
-    </tr>
-  </table>
-</center>
+      </div>
+      @(model.showSideContent ? html.extend('modern/side-content', function() {}) : '')
+    </section>
+
+    <section id="footer">
+      @html.extend('modern/tags', function () {})
+    </section>
+  </div>
 </body>
 </html>

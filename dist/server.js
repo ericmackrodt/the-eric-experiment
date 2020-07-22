@@ -46,15 +46,19 @@ var fs = require("fs");
 var path = require("path");
 var sharp = require("sharp");
 var ua = require("universal-analytics");
+var category_1 = require("./pages/category");
 var home_1 = require("./pages/home");
 var page_1 = require("./pages/page");
 var post_1 = require("./pages/post");
+var tag_1 = require("./pages/tag");
 var tags = require("../contents/tags.json");
 var categories = require("../contents/categories.json");
 var posts = require("../contents/posts.json");
+var mainMenu = require("../contents/main-menu.json");
 var app = express();
 var port = process.env.PORT || 3001;
 app.set("view engine", "vash");
+app.use("/assets", express.static("assets"));
 app.use(cookieParser());
 app.set("trust proxy", 1);
 app.use(useragent.express());
@@ -66,11 +70,11 @@ app.use(session({
 }));
 app.use(ua.middleware("blah", { cookieName: "_ga" }));
 app.use(body_parser_1.urlencoded({ extended: true }));
-function processImage(req, data, fit) {
-    if (fit === void 0) { fit = "fill"; }
+function processImage(req, data) {
     return __awaiter(this, void 0, void 0, function () {
-        var width, height;
+        var fit, width, height;
         return __generator(this, function (_a) {
+            fit = req.query.fit;
             width = parseInt(req.params.width);
             height = parseInt(req.params.height);
             return [2, sharp(data)
@@ -85,16 +89,15 @@ function processImage(req, data, fit) {
         });
     });
 }
-app.get("/img/:width/:height/*", function (req, res, next) { return __awaiter(void 0, void 0, void 0, function () {
-    var fit, param, buffer, result, _1;
+app.get("/post/asset/:width/:height/:id/*", function (req, res, next) { return __awaiter(void 0, void 0, void 0, function () {
+    var param, buffer, result, _1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 2, , 3]);
-                fit = req.query.fit;
                 param = req.params[0];
-                buffer = fs.readFileSync(path.join(__dirname, "../assets", param));
-                return [4, processImage(req, buffer, fit)];
+                buffer = fs.readFileSync(path.join(__dirname, "../contents/posts", req.params.id, param));
+                return [4, processImage(req, buffer)];
             case 1:
                 result = _a.sent();
                 res.type("jpg");
@@ -102,6 +105,28 @@ app.get("/img/:width/:height/*", function (req, res, next) { return __awaiter(vo
                 return [3, 3];
             case 2:
                 _1 = _a.sent();
+                next();
+                return [3, 3];
+            case 3: return [2];
+        }
+    });
+}); });
+app.get("/img/:width/:height/*", function (req, res, next) { return __awaiter(void 0, void 0, void 0, function () {
+    var param, buffer, result, _2;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                param = req.params[0];
+                buffer = fs.readFileSync(path.join(__dirname, "../assets", param));
+                return [4, processImage(req, buffer)];
+            case 1:
+                result = _a.sent();
+                res.type("jpg");
+                res.send(result);
+                return [3, 3];
+            case 2:
+                _2 = _a.sent();
                 next();
                 return [3, 3];
             case 3: return [2];
@@ -126,9 +151,11 @@ app.get("/externalImage/:width/:height", function (req, res) { return __awaiter(
         }
     });
 }); });
-app.get("/", home_1.home({ tags: tags, categories: categories, posts: posts }));
-app.get("/post/*", post_1.post({ tags: tags, categories: categories, posts: posts }));
-app.get("/*", page_1.page);
+app.get("/", home_1.home({ tags: tags, categories: categories, posts: posts, mainMenu: mainMenu }));
+app.get("/category", category_1.category({ tags: tags, categories: categories, posts: posts, mainMenu: mainMenu }));
+app.get("/tag", tag_1.tag({ tags: tags, categories: categories, posts: posts, mainMenu: mainMenu }));
+app.get("/post/:id", post_1.post({ tags: tags, categories: categories, posts: posts, mainMenu: mainMenu }));
+app.get("/*", page_1.page({ tags: tags, categories: categories, posts: posts, mainMenu: mainMenu }));
 app.listen(port, function () {
     return console.log("Example app listening at http://localhost:" + port);
 });

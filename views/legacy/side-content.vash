@@ -1,17 +1,25 @@
 @{
   var categories = Object.keys(model.categories);
-  var tags = Object.keys(model.tags);
 }
+<td valign="top" width="200">
 <h3>Categories</h3>
-<ul>
+<table cellspacing="0" cellpadding="0">
   @categories.forEach(function (item) {
-    <li>@item</li>
+    <tr>
+      <td>
+        <a href="/category?id=@item">
+          @item
+        </a>
+      </td>
+    </tr>
   })
-</ul>
+</table>
 
-<h3>Tags</h3>
-<ul>
-  @tags.forEach(function (item) {
-    <li>@item</li>
-  })
-</ul>
+<hr />
+
+<center>
+  <img src="/assets/200.gif" width="88" height="31" />
+  <br />
+  <img src="/assets/netscap4.gif" />
+</center>
+</td>

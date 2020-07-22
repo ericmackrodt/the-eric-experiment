@@ -1,0 +1,6 @@
+@html.extend('legacy/layout', function(model){
+	@html.block('content', function(model){
+		<h2>@model.title</h2>
+		@html.extend('legacy/post-list', function () {})
+	})
+})
