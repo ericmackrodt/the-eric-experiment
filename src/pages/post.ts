@@ -27,7 +27,6 @@ export function post(blogData: BlogData) {
         description: meta.description,
       };
 
-      console.log(metadata);
       const content = marked(lines.slice(6).join("\n"), {});
 
       res.render(viewPath(req, "post"), {
@@ -37,7 +36,6 @@ export function post(blogData: BlogData) {
         showSideContent: true,
       });
     } catch (ex) {
-      console.log(ex);
       next();
     }
   };

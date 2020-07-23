@@ -113,13 +113,13 @@ p {
   & > #content {
     flex: 1;
   }
-
-  & > #side-content {
-    width: 20%;
-  }
 }
 
 #side-content {
+  @include tablet {
+    width: 20%;
+  }
+
   .heading {
     background-color: $main-orange;
     color: #fff;
