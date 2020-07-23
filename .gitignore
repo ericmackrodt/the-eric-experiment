@@ -104,3 +104,6 @@ typings/
 .tern-port
 
 .sass-cache
+
+dist/
+assets/*.css
