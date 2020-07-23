@@ -1,4 +1,4 @@
-<table width="100%">
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
   @model.posts.forEach(function (item, index) {
     @{
       var image = item.filename + "/" +item.image;
@@ -11,6 +11,7 @@
             src="/post/asset/143/80/@image?fit=cover"
             width="143"
             height="80"
+            border="0"
           />
         </a>
       </td>

@@ -1,13 +1,7 @@
-<table cellspacing="0" cellpadding="4">
+<table cellspacing="2" cellpadding="2" border="0">
   <tr>
    @model.mainMenu.forEach(function (item) {
-      <td>
-        <a href="@item.path">
-          <font face="arial" color="#FFFFFF">
-            @item.label
-          </a>
-        </a>
-      </td>
+      <td><a href="@item.path" style="text-decoration: none"><font face="arial" color="#FFFFFF">@item.label</a></a></td>
    })
   </tr>
 </table>

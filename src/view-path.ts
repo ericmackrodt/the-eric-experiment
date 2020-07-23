@@ -6,7 +6,10 @@ export function viewPath(req: Request, view: string) {
     return ["legacy", view].join("/");
   }
 
-  if (userAgent.browser.toLowerCase() === "netscape") {
+  if (
+    userAgent.browser.toLowerCase() === "netscape" ||
+    userAgent.browser.toLowerCase() === "unknown"
+  ) {
     return ["legacy", view].join("/");
   }
 
