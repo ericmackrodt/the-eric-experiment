@@ -3,6 +3,7 @@
 }
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>The Eric Experiment</title>
   @html.block('seo')
 </head>
