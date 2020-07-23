@@ -1,0 +1,21 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  // height: 100%;
+  font-size: $font-size-base;
+  font-family: $font-family;
+  color: $font-dark-grey;
+}
+
+input,
+textarea,
+button {
+  font-family: $font-family;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

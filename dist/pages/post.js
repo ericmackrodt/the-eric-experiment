@@ -74,7 +74,7 @@ function post(blogData) {
                     description: meta.description,
                 };
                 console.log(metadata);
-                content = marked(lines.slice(5).join("\n"), {});
+                content = marked(lines.slice(6).join("\n"), {});
                 res.render(view_path_1.viewPath(req, "post"), __assign(__assign({}, blogData), { metadata: metadata,
                     content: content, showSideContent: true }));
             }

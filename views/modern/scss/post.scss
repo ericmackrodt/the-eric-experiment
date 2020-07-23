@@ -1,0 +1,15 @@
+#post-metadata {
+  margin-top: 0.5rem;
+
+  .metadata {
+    font-size: $font-size-500;
+    color: $font-light-grey;
+    span {
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+#post-content {
+  margin-top: 1rem;
+}

@@ -28,7 +28,7 @@ export function post(blogData: BlogData) {
       };
 
       console.log(metadata);
-      const content = marked(lines.slice(5).join("\n"), {});
+      const content = marked(lines.slice(6).join("\n"), {});
 
       res.render(viewPath(req, "post"), {
         ...blogData,

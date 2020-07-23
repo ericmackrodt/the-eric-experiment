@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>The Eric Experiment</title>
   <link rel="stylesheet" href="/assets/modern.css" />
-  <link rel="stylesheet" href="/assets/layout.css" />
   @html.block('seo')
 </head>
 <body>

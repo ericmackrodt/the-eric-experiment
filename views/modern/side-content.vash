@@ -2,24 +2,21 @@
   var categories = Object.keys(model.categories);
 }
 <div id="side-content">
-<h3>Categories</h3>
-<table cellspacing="0" cellpadding="0">
-  @categories.forEach(function (item) {
-    <tr>
-      <td>
-        <a href="/category?id=@item">
-          @item
-        </a>
-      </td>
-    </tr>
-  })
-</table>
-
-<hr />
-
-<center>
-  <img src="/assets/200.gif" width="88" height="31" />
-  <br />
-  <img src="/assets/netscap4.gif" />
-</center>
+  <div class="heading">
+    Categories
+  </div>
+  <div class="content">
+    @categories.forEach(function (item) {
+      <a href="/category?id=@item">
+        @item
+      </a>
+    })
+  </div>
+  <div class="heading">
+    Compatibility
+  </div>
+  <div class="content">
+    <img src="/assets/200.gif" width="88" height="31" />
+    <img src="/assets/netscap4.gif" />
+  </div>
 </div>

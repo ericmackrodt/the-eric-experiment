@@ -8,7 +8,10 @@
     "dev": "ts-node-dev --respawn ./src/server.ts",
     "createindex": "ts-node ./src/createindex.ts",
     "tsc": "tsc",
-    "start": "node ./dist/server.js"
+    "start": "node ./dist/server.js",
+    "scss": "sass views/modern/scss/index.scss:assets/modern.css",
+    "scss:watch": "sass --watch views/modern/scss/index.scss:assets/modern.css",
+    "build": "tsc && yarn scss"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +23,7 @@
     "express-session": "^1.17.1",
     "express-useragent": "^1.0.15",
     "marked": "^1.1.1",
+    "node-sass": "^4.14.1",
     "query-string": "^6.13.1",
     "sharp": "^0.25.4",
     "universal-analytics": "^0.4.23",

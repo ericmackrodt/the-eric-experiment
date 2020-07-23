@@ -28,14 +28,23 @@
 
 	@html.block('content', function(model){
 		<h1>@model.metadata.title</h1>
-    <b>Published: </b>@model.metadata.date
-		<br />
-		<b>Tags: </b> @model.metadata.tags.forEach(function (item, index) {
-			@{
-				var isLast = index === (model.metadata.tags.length - 1);
-			}
-			<a href="/tag?id=@item">@item</a>@(isLast ? '' : ', ')
-		})
-    @html.raw(model.content)
+		<div id="post-metadata">
+			<div class="metadata">
+				<span>Published:</span>
+				@model.metadata.date
+			</div>
+			<div class="metadata">
+				<span>Tags:</span>
+				@model.metadata.tags.forEach(function (item, index) {
+					@{
+						var isLast = index === (model.metadata.tags.length - 1);
+					}
+					<a href="/tag?id=@item">@item</a>@(isLast ? '' : ', ')
+				})
+			</div>
+		</div>
+		<div id="post-content">
+    	@html.raw(model.content)
+		</div>
 	})
 })

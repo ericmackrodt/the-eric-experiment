@@ -1,0 +1,60 @@
+$page-background: "/assets/starfiel.gif";
+$header-image: "/assets/header.jpg";
+$size-landscape-phone: 36em;
+$size-tablet: 48em;
+$size-desktop: 62em;
+$size-large-desktop: 75em;
+
+$grey50: #fafafa;
+$grey100: #f5f5f5;
+$grey200: #e0e0e0;
+$grey300: #cdcdcd;
+$grey400: #a9a9a9;
+$grey500: #707070;
+$grey600: #424242;
+$grey900: #212121;
+
+$main-blue: #1238b3;
+$main-blue-lighter: #265aff;
+$main-orange: #ff9933;
+
+$font-size-base: 16px;
+$font-size-300: 0.7rem;
+$font-size-400: 0.8rem;
+$font-size-500: 0.875rem;
+$font-size-600: 1rem;
+$font-size-700: 1.3rem;
+$font-size-800: 1.5rem;
+$font-size-900: 1.8rem;
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-dark-grey: $grey900;
+$font-mid-grey: $grey600;
+$font-light-grey: $grey500;
+$font-family: Roboto, sans-serif;
+
+@mixin landscape-phone {
+  @media screen and (min-width: $size-landscape-phone) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $size-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $size-desktop) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media screen and (min-width: $size-large-desktop) {
+    @content;
+  }
+}
