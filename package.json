@@ -24,6 +24,7 @@
     "express-useragent": "^1.0.15",
     "marked": "^1.1.1",
     "node-sass": "^4.14.1",
+    "sass": "^1.26.10",
     "query-string": "^6.13.1",
     "sharp": "^0.25.4",
     "universal-analytics": "^0.4.23",
