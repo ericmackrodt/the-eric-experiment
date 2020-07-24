@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "perfect_dos_vga_437regular";
+  src: url("/assets/dos/perfect_dos_vga_437-webfont.woff2") format("woff2"),
+    url("/assets/dos/perfect_dos_vga_437-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ms_sans_serifregular";
+  src: url("/assets/sans/ms_sans_serif-webfont.woff2") format("woff2"),
+    url("/assets/sans/ms_sans_serif-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 $page-background: "/assets/starfiel.gif";
 $header-image: "/assets/header.jpg";
 $size-landscape-phone: 36em;
@@ -33,7 +49,7 @@ $font-weight-light: 300;
 $font-dark-grey: $grey900;
 $font-mid-grey: $grey600;
 $font-light-grey: $grey500;
-$font-family: Roboto, sans-serif;
+$font-family: "ms_sans_serifregular";
 
 @mixin landscape-phone {
   @media screen and (min-width: $size-landscape-phone) {

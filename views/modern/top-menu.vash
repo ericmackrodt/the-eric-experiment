@@ -1,8 +1,0 @@
-
-@model.mainMenu.forEach(function (item) {
-  <a href="@item.path">
-    <font face="arial" color="#FFFFFF">
-      @item.label
-    </a>
-  </a>
-})

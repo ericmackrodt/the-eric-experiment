@@ -7,23 +7,55 @@
   @html.block('seo')
 </head>
 <body>
-  <div id="root">
-      <div id="banner">
+<div class="window-border">
+  <div class="window">
+    <div class="title">
+      <div class="close">
+        &#8212;
       </div>
-      <div id="top-menu">
-        @html.extend('modern/top-menu', function () {})
+      The Eric Experiment
+      <div class="button-container">
+        <div class="button maximise">
+          <span>
+            &#9650;
+          </span>
+        </div>
       </div>
+      <div class="button-container">
+        <div class="button">
+          <span>
+            &#9660;
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <div id="banner"></div>
 
-    <section id="page">
-      <div id="content">
-        @html.block('content')
-      </div>
-      @(model.showSideContent ? html.extend('modern/side-content', function() {}) : '')
-    </section>
+    <div class="menubar">
+      @model.mainMenu.forEach(function (item) {
+        <a href="@item.path" class="menuitem">
+            @item.label
+        </a>
+      })
+    </div>
 
-    <section id="footer">
-      @html.extend('modern/tags', function () {})
-    </section>
+    <div class="content">
+      <section id="page">
+        <div id="content">
+          @html.block('content')
+        </div>
+        @(model.showSideContent ? html.extend('modern/side-content', function() {}) : '')
+      </section>
+      <section id="footer">
+        @html.extend('modern/tags', function () {})
+      </section>
+    </div>
   </div>
+  <div class="handle topright"></div>
+  <div class="handle bottomright"></div>
+  <div class="handle topleft"></div>
+  <div class="handle bottomleft"></div>
+</div>
 </body>
 </html>
