@@ -1,21 +1,41 @@
 @html.extend('modern/layout', function(model){
 	@html.block('content', function(model){
-		<h2>Welcome</h2>
-		<p>
-			Hello, my name is Eric and welcome to this experiment which is my life.
-		</p>
-		<p>
-			This is the website where you can check out the projects I have worked on, the stuff I have been attempting and more.
-		</p>
-		<p>
-			If you like retro gaming, retro computing, music and other curious and random stuff, I think you might enjoy following this.
-		</p>
-		<p>
-			Be sure to subscribe to the <a href="https://www.youtube.com/user/EricMackrodt?sub_confirmation=1" target="_blank">Youtube channel</a> 
-			because most parts of this experiment will be there!
-		</p>
+		<div id="welcome">
+			<h2>Welcome</h2>
+			<p>
+				Hello, my name is Eric and welcome to this experiment which is my life.
+			</p>
+			<p>
+				This is the website where you can check out the projects I have worked on, the stuff I have been attempting and more.
+			</p>
+			<p>
+				If you like retro gaming, retro computing, music and other curious and random stuff, I think you might enjoy following this.
+			</p>
+			<p>
+				Be sure to subscribe to the <a href="https://www.youtube.com/user/EricMackrodt?sub_confirmation=1" target="_blank">Youtube channel</a> 
+				because most parts of this experiment will be there!
+			</p>
+			<div class="social-icons">
+				<a href="https://twitter.com/ericmackrodt" target="_blank" class="social-icon twitter">
+				</a>
 
-		<h3>Latest parts of the experiment</h3>
+				<a href="https://www.facebook.com/ericmackrodt" target="_blank" class="social-icon facebook">
+				</a>
+
+				<a href="https://www.youtube.com/user/EricMackrodt?sub_confirmation=1" target="_blank" class="social-icon youtube">
+				</a>
+
+				<a href="https://github.com/ericmackrodt" target="_blank" class="social-icon github">
+				</a>
+
+				<a href="https://www.instagram.com/ericmackrodt/" target="_blank" class="social-icon instagram">
+				</a>
+
+				<a href="https://www.linkedin.com/in/ericmackrodt/" target="_blank" class="social-icon linkedin">
+				</a>
+			</div>
+		</div>
+		<h2>Latest parts of the experiment</h2>
 		@html.extend('modern/post-list', function () {})
 	})
 })

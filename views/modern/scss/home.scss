@@ -1,0 +1,53 @@
+@mixin social-media-icons {
+  background: url("/assets/social-media-icons-all.svg");
+  background-size: 35rem;
+  background-repeat: no-repeat;
+}
+
+#welcome {
+  margin-bottom: 2rem;
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  .social-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    display: block;
+    margin-right: 0.5rem;
+
+    &.twitter {
+      @include social-media-icons();
+      background-position: -5.9rem -5.9rem;
+    }
+
+    &.facebook {
+      @include social-media-icons();
+      background-position: -8.85rem 0.05rem;
+    }
+
+    &.youtube {
+      @include social-media-icons();
+      background-position: -11.8rem -5.9rem;
+    }
+
+    &.github {
+      @include social-media-icons();
+      background-position: -11.8rem 0.05rem;
+    }
+
+    &.instagram {
+      @include social-media-icons();
+      background-position: 0.05rem -2.92rem;
+    }
+
+    &.linkedin {
+      @include social-media-icons();
+      background-position: -2.9rem -2.92rem;
+    }
+  }
+}
