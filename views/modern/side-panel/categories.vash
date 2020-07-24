@@ -1,0 +1,48 @@
+@{
+  var categories = Object.keys(model.categories);
+}
+
+<div id="categories-window" class="window-border categories">
+  <div class="window">
+    <div class="title">
+      <div class="close">
+        <span class="shadow">
+          &#8212;
+        </span>
+        <span class="text">
+          &#8212;
+        </span>
+      </div>
+      Categories
+      <div class="button-container">
+        <div class="button maximise">
+          <span>
+            &#9650;
+          </span>
+        </div>
+      </div>
+      <div class="button-container">
+        <div class="button minimise">
+          <span>
+            &#9660;
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      @categories.forEach(function (item) {
+        <a href="/category?id=@item">
+          @item
+        </a>
+      })
+
+
+      <span>C:\><span class="cursor">_</span></span>
+    </div>
+  </div>
+  <div class="handle topright"></div>
+  <div class="handle bottomright"></div>
+  <div class="handle topleft"></div>
+  <div class="handle bottomleft"></div>
+</div>

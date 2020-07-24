@@ -7,11 +7,16 @@
   @html.block('seo')
 </head>
 <body>
-<div class="window-border">
+<div class="window-border" id="main-window">
   <div class="window">
     <div class="title">
       <div class="close">
-        &#8212;
+        <span class="shadow">
+          &#8212;
+        </span>
+        <span class="text">
+          &#8212;
+        </span>
       </div>
       The Eric Experiment
       <div class="button-container">
@@ -22,7 +27,7 @@
         </div>
       </div>
       <div class="button-container">
-        <div class="button">
+        <div class="button minimise">
           <span>
             &#9660;
           </span>
@@ -46,6 +51,25 @@
           @html.block('content')
         </div>
         @(model.showSideContent ? html.extend('modern/side-content', function() {}) : '')
+
+        <div class="icons">
+          <div class="icon" id="categories-icon" style="display: none;">
+            <img src="/assets/folder-icon.png" />
+            <div class="text">Categories</div>
+          </div>
+          <div class="icon" id="twitter-icon" style="display: none;">
+            <img src="/assets/folder-icon.png" />
+            <div class="text">Twitter</div>
+          </div>
+          <div class="icon" id="soundcloud-icon" style="display: none;">
+            <img src="/assets/folder-icon.png" />
+            <div class="text">SoundCloud</div>
+          </div>
+          <div class="icon" id="compatibility-icon" style="display: none;">
+            <img src="/assets/folder-icon.png" />
+            <div class="text">Compatibility</div>
+          </div>
+        </div>
       </section>
       <section id="footer">
         @html.extend('modern/tags', function () {})
@@ -57,5 +81,14 @@
   <div class="handle topleft"></div>
   <div class="handle bottomleft"></div>
 </div>
+
+<div class="icons">
+  <div class="icon" id="main-icon" style="display: none;">
+    <img src="/assets/root-icon.png" />
+    <div class="text">The Eric Experiment</div>
+  </div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="/assets/client.js"></script>
 </body>
 </html>

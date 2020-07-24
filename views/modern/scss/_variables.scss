@@ -49,7 +49,9 @@ $font-weight-light: 300;
 $font-dark-grey: $grey900;
 $font-mid-grey: $grey600;
 $font-light-grey: $grey500;
-$font-family: "ms_sans_serifregular";
+$font-family-sans: "ms_sans_serifregular";
+$font-family-dos: "perfect_dos_vga_437regular";
+$font-family: "Roboto", sans-serif;
 
 @mixin landscape-phone {
   @media screen and (min-width: $size-landscape-phone) {
