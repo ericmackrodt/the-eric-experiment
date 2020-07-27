@@ -1,4 +1,9 @@
 @html.extend('modern/layout', function(model){
+	@html.block('seo', function(model) {
+		<meta name="description" content="This is the website where you can check out the projects I have worked on, the stuff I have been attempting and more.">
+		<meta name="keywords" content="Retro gaming, Retro computing, Windows 3.11, Windows 3.x, DOS, MS-DOS, Playstation, Dreamcast, Mega Drive, Nintendo Gameboy, Nintendo 64">
+		<link rel="canonical" href="http://www.theericexperiment.com/" />
+	})
 	@html.block('content', function(model){
 		<div id="welcome">
 			<div class="profile">

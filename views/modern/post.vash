@@ -6,6 +6,7 @@
 	@html.block('seo', function(model) {
 		<meta name="description" content="@model.metadata.description">
 		<link rel="canonical" href="http://www.theericexperiment.com/post/@model.metadata.filename" />
+		<meta name="keywords" content="@model.metadata.tags.join(', ')">
 		<meta property="og:locale" content="en_AU" />
 		<meta property="og:type" content="article" />
 		<meta property="og:title" content="@model.metadata.title" />
