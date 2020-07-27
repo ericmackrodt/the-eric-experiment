@@ -11,7 +11,7 @@
     "start": "node ./dist/server.js",
     "scss": "sass views/modern/scss/index.scss:assets/modern.css",
     "scss:watch": "sass --watch views/modern/scss/index.scss:assets/modern.css",
-    "build": "tsc && yarn scss"
+    "build": "yarn createindex && tsc && yarn scss"
   },
   "author": "",
   "license": "ISC",
