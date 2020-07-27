@@ -148,3 +148,10 @@ p {
     }
   }
 }
+
+#main-window {
+  @include tablet {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}

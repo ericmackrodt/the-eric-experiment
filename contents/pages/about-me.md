@@ -1,5 +1,5 @@
 # About me
 
 <center>
-  <img src="/assets/construction.gif" />
+  <img src="/assets/construction.gif" alt="under construction" />
 </center>

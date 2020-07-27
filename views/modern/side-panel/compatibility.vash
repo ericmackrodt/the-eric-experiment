@@ -27,8 +27,8 @@
     </div>
 
     <div class="content">
-      <img src="/assets/200.gif" width="88" height="31" />
-      <img src="/assets/netscap4.gif" />
+      <img src="/assets/200.gif" width="88" height="31" alt="Compatible with IE" />
+      <img src="/assets/netscap4.gif" alt="Compatible with Netscape" />
     </div>
   </div>
   <div class="handle topright"></div>

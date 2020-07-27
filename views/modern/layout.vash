@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <title>The Eric Experiment</title>
   <link rel="stylesheet" href="/assets/modern.css" />
   @html.block('seo')
@@ -54,19 +55,19 @@
 
         <div class="icons">
           <div class="icon" id="categories-icon" style="display: none;">
-            <img src="/assets/folder-icon.png" />
+            <img src="/assets/folder-icon.png" alt="Categories" />
             <div class="text">Categories</div>
           </div>
           <div class="icon" id="twitter-icon" style="display: none;">
-            <img src="/assets/folder-icon.png" />
+            <img src="/assets/folder-icon.png" alt="Twitter" />
             <div class="text">Twitter</div>
           </div>
           <div class="icon" id="soundcloud-icon" style="display: none;">
-            <img src="/assets/folder-icon.png" />
+            <img src="/assets/folder-icon.png" alt="SoundCloud" />
             <div class="text">SoundCloud</div>
           </div>
           <div class="icon" id="compatibility-icon" style="display: none;">
-            <img src="/assets/folder-icon.png" />
+            <img src="/assets/folder-icon.png" alt="Compatibility" />
             <div class="text">Compatibility</div>
           </div>
         </div>
@@ -84,7 +85,7 @@
 
 <div class="icons">
   <div class="icon" id="main-icon" style="display: none;">
-    <img src="/assets/root-icon.png" />
+    <img src="/assets/root-icon.png" alt="The Eric Experiment" />
     <div class="text">The Eric Experiment</div>
   </div>
 </div>
