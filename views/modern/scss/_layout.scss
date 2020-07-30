@@ -71,18 +71,21 @@ p {
 }
 
 #page {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  position: relative;
   font-family: $font-family;
 
-  @include tablet {
-    flex-direction: row;
-    align-items: flex-start;
+  .desktop {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: flex-start;
+    }
   }
 
-  & > #content {
+  #content {
     flex: 1;
     padding: 0.5rem;
     .title {
@@ -149,7 +152,7 @@ p {
   }
 }
 
-#main-window {
+.window-margin {
   @include tablet {
     margin-top: 1rem;
     margin-bottom: 1rem;

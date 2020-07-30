@@ -5,6 +5,20 @@
   padding: 4px;
   border: 1px solid #000;
   position: relative;
+
+  &.maximized {
+    max-width: initial;
+    margin: 0;
+
+    &:not(.main) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 99999;
+    }
+  }
 }
 
 .window {

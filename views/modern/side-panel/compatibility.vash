@@ -1,38 +1,4 @@
-<div id="compatibility-window" class="window-border">
-  <div class="window">
-    <div class="title">
-      <div class="close">
-        <span class="shadow">
-          &#8212;
-        </span>
-        <span class="text">
-          &#8212;
-        </span>
-      </div>
-      Compatibility
-      <div class="button-container">
-        <div class="button maximise">
-          <span>
-            &#9650;
-          </span>
-        </div>
-      </div>
-      <div class="button-container">
-        <div class="button minimise">
-          <span>
-            &#9660;
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <div class="content">
-      <img src="/assets/200.gif" width="88" height="31" alt="Compatible with IE" />
-      <img src="/assets/netscap4.gif" alt="Compatible with Netscape" />
-    </div>
-  </div>
-  <div class="handle topright"></div>
-  <div class="handle bottomright"></div>
-  <div class="handle topleft"></div>
-  <div class="handle bottomleft"></div>
-</div>
+<window window-id="compatibility" v-bind:desktop="sidePanelDesk" title="Compatibility" icon="/assets/folder-icon.png">
+  <img src="/assets/200.gif" width="88" height="31" alt="Compatible with IE" />
+  <img src="/assets/netscap4.gif" alt="Compatible with Netscape" />
+</window>

@@ -2,47 +2,14 @@
   var categories = Object.keys(model.categories);
 }
 
-<div id="categories-window" class="window-border categories">
-  <div class="window">
-    <div class="title">
-      <div class="close">
-        <span class="shadow">
-          &#8212;
-        </span>
-        <span class="text">
-          &#8212;
-        </span>
-      </div>
-      Categories
-      <div class="button-container">
-        <div class="button maximise">
-          <span>
-            &#9650;
-          </span>
-        </div>
-      </div>
-      <div class="button-container">
-        <div class="button minimise">
-          <span>
-            &#9660;
-          </span>
-        </div>
-      </div>
-    </div>
+<window window-id="categories" v-bind:desktop="sidePanelDesk" title="Categories" icon="/assets/folder-icon.png">
+  <div id="categories-widget">
+    @categories.forEach(function (item) {
+      <a href="/category?id=@item">
+        @item
+      </a>
+    })
 
-    <div class="content">
-      @categories.forEach(function (item) {
-        <a href="/category?id=@item">
-          @item
-        </a>
-      })
-
-
-      <span>C:\><span class="cursor">_</span></span>
-    </div>
+    <span>C:\><span class="cursor">_</span></span>
   </div>
-  <div class="handle topright"></div>
-  <div class="handle bottomright"></div>
-  <div class="handle topleft"></div>
-  <div class="handle bottomleft"></div>
-</div>
+</window>
