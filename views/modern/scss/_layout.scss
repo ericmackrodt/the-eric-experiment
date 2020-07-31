@@ -94,6 +94,30 @@ p {
       border-bottom: 0;
     }
   }
+
+  .page-layout {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .left-content,
+    .right-content {
+      padding: 0.5rem;
+      @include tablet {
+        width: 25%;
+      }
+    }
+
+    .content {
+      flex: 1;
+    }
+  }
 }
 
 #side-content {
