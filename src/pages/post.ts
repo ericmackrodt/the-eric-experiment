@@ -4,7 +4,7 @@ import { BlogData, PostMetadata } from "../types";
 import * as fs from "fs";
 import * as path from "path";
 import { parse } from "yaml";
-import * as marked from "marked";
+import { convertToHtml } from "../markdown";
 
 export function post(blogData: BlogData) {
   return async (req: Request, res: Response, next: NextFunction) => {
@@ -27,7 +27,7 @@ export function post(blogData: BlogData) {
         description: meta.description,
       };
 
-      const content = marked(lines.slice(6).join("\n"), {});
+      const content = convertToHtml(req, lines.slice(6).join("\n"));
 
       res.render(viewPath(req, "post"), {
         ...blogData,

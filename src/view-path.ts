@@ -1,17 +1,21 @@
 import { Request } from "express";
 
-export function viewPath(req: Request, view: string) {
+export function isLegacy(req: Request) {
   const userAgent = req.useragent;
   if (userAgent.isIE && parseFloat(userAgent.version) < 10) {
-    return ["legacy", view].join("/");
+    return true;
   }
 
   if (
     userAgent.browser.toLowerCase() === "netscape" ||
     userAgent.browser.toLowerCase() === "unknown"
   ) {
-    return ["legacy", view].join("/");
+    return true;
   }
 
-  return ["modern", view].join("/");
+  return false;
+}
+
+export function viewPath(req: Request, view: string) {
+  return [isLegacy(req) ? "legacy" : "modern", view].join("/");
 }

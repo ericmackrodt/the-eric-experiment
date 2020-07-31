@@ -11,4 +11,4 @@ The displays feature LED strips that keep it illuminated.
 
 [Click here](https://www.youtube.com/watch?v=weWV3ot45e0) to go to the Youtube Video.
 
-[![Gameboy Displays](/externalimage/400/300?url=https://img.youtube.com/vi/weWV3ot45e0/0.jpg?fill=cover)](https://www.youtube.com/watch?v=weWV3ot45e0)
+![Gameboy Displays](https://www.youtube.com/watch?v=weWV3ot45e0)
