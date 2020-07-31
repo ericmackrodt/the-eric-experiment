@@ -16,11 +16,13 @@
       <div id="banner"></div>
 
       <div class="menubar">
-        @model.mainMenu.forEach(function (item) {
-          <a href="@item.path" class="menuitem">
-              @item.label
-          </a>
-        })
+        <mobile-menu>
+          @model.mainMenu.forEach(function (item) {
+            <a href="@item.path" class="menuitem">
+                @item.label
+            </a>
+          })
+        </mobile-menu>
       </div>
     </template>
     <section id="page">
