@@ -1,7 +1,7 @@
 @{
   var categories = Object.keys(model.categories);
 }
-<div id="side-content">
+<div class="side-content">
   @html.extend("modern/side-panel/categories", function () {})
   @html.extend("modern/side-panel/twitter", function () {})
   @html.extend("modern/side-panel/soundcloud", function () {})

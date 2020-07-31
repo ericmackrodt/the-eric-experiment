@@ -83,44 +83,19 @@ p {
       flex-direction: row;
       align-items: flex-start;
     }
-  }
-
-  #content {
-    flex: 1;
-    padding: 0.5rem;
-    .title {
-      background-color: transparent;
-      text-decoration: none;
-      border-bottom: 0;
-    }
-  }
-
-  .page-layout {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-
-    @include tablet {
-      flex-direction: row;
-      align-items: flex-start;
-    }
-
-    .left-content,
-    .right-content {
-      padding: 0.5rem;
-      @include tablet {
-        width: 25%;
-      }
-    }
-
-    .content {
+    > .content {
       flex: 1;
+      padding: 0.5rem;
+      .title {
+        background-color: transparent;
+        text-decoration: none;
+        border-bottom: 0;
+      }
     }
   }
 }
 
-#side-content {
+.side-content {
   padding: 0.5rem;
   @include tablet {
     width: 25%;

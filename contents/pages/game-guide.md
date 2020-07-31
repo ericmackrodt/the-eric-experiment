@@ -1,3 +1,5 @@
+$$ content $$
+
 # Game Guide
 
 <center>

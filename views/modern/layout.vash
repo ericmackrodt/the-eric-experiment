@@ -27,9 +27,7 @@
     </template>
     <section id="page">
       <desktop v-slot="sidePanelDesk" desk-id="side-panel">
-        <div id="content">
-          @html.block('content')
-        </div>
+        @html.block('content')
         @(model.showSideContent ? html.extend('modern/side-content', function() {}) : '')
       </desktop>
     </section>

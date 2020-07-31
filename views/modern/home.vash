@@ -5,36 +5,38 @@
 		<link rel="canonical" href="http://www.theericexperiment.com/" />
 	})
 	@html.block('content', function(model){
-		<div id="welcome">
-			<div class="profile">
-				<div class="avatar">
-					<img src="/assets/profile.jpg" alt="MEEEEE!!!">
+		<div class="content">
+			<div id="welcome">
+				<div class="profile">
+					<div class="avatar">
+						<img src="/assets/profile.jpg" alt="MEEEEE!!!">
+					</div>
+				</div>
+				<div class="content">
+					@html.raw(model.intro)
+					<div class="social-icons">
+						<a href="https://twitter.com/ericmackrodt" target="_blank" class="social-icon twitter">
+						</a>
+
+						<a href="https://www.facebook.com/ericmackrodt" target="_blank" class="social-icon facebook">
+						</a>
+
+						<a href="https://www.youtube.com/user/EricMackrodt?sub_confirmation=1" target="_blank" class="social-icon youtube">
+						</a>
+
+						<a href="https://github.com/ericmackrodt" target="_blank" class="social-icon github">
+						</a>
+
+						<a href="https://www.instagram.com/ericmackrodt/" target="_blank" class="social-icon instagram">
+						</a>
+
+						<a href="https://www.linkedin.com/in/ericmackrodt/" target="_blank" class="social-icon linkedin">
+						</a>
+					</div>
 				</div>
 			</div>
-			<div class="content">
-				@html.raw(model.intro)
-				<div class="social-icons">
-					<a href="https://twitter.com/ericmackrodt" target="_blank" class="social-icon twitter">
-					</a>
-
-					<a href="https://www.facebook.com/ericmackrodt" target="_blank" class="social-icon facebook">
-					</a>
-
-					<a href="https://www.youtube.com/user/EricMackrodt?sub_confirmation=1" target="_blank" class="social-icon youtube">
-					</a>
-
-					<a href="https://github.com/ericmackrodt" target="_blank" class="social-icon github">
-					</a>
-
-					<a href="https://www.instagram.com/ericmackrodt/" target="_blank" class="social-icon instagram">
-					</a>
-
-					<a href="https://www.linkedin.com/in/ericmackrodt/" target="_blank" class="social-icon linkedin">
-					</a>
-				</div>
-			</div>
+			<h2>Latest parts of the experiment</h2>
+			@html.extend('modern/post-list', function () {})
 		</div>
-		<h2>Latest parts of the experiment</h2>
-		@html.extend('modern/post-list', function () {})
 	})
 })

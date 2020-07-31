@@ -1,3 +1,5 @@
+$$ content $$
+
 # Windows 3.x resource page
 
 <center>

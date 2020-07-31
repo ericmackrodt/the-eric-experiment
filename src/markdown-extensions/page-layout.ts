@@ -30,18 +30,16 @@ const getLegacyLayout = (layout: Layout, converter: Converter) => {
 const getModernLayout = (layout: Layout, converter: Converter) => {
   return converter.makeHtml(
     [
-      '<div class="page-layout">',
       layout["left-content"] &&
-        ['<div class="left-content">', layout["left-content"], "</div>"].join(
+        ['<div class="side-content">', layout["left-content"], "</div>"].join(
           ""
         ),
       layout["content"] &&
         ['<div class="content">', layout["content"], "</div>"].join(""),
       layout["right-content"] &&
-        ['<div class="right-content">', layout["right-content"], "</div>"].join(
+        ['<div class="side-content">', layout["right-content"], "</div>"].join(
           ""
         ),
-      "</div>",
     ]
       .filter((o) => !!o)
       .join("")
