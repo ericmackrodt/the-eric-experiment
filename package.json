@@ -6,19 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn ./src/server.ts",
+    "build:client": "webpack --config webpack.config.js",
     "createindex": "ts-node ./src/createindex.ts",
     "tsc": "tsc",
     "start": "node ./dist/server.js",
-    "scss": "sass views/modern/scss/index.scss:assets/modern.css",
+    "scss": "sass views/modern/scss/index.scss:assets/modern.css --style compressed",
     "scss:watch": "sass --watch views/modern/scss/index.scss:assets/modern.css",
     "remove:dist": "rimraf dist/",
-    "build": "yarn remove:dist && yarn createindex && tsc && yarn scss"
+    "build": "yarn build:client && yarn remove:dist && yarn createindex && yarn tsc && yarn scss"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
@@ -32,10 +34,16 @@
     "showdown-youtube": "^1.2.1",
     "universal-analytics": "^0.4.23",
     "vash": "^0.13.0",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.5",
+    "vue-click-outside": "^1.1.0",
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-property-decorator": "^9.0.0",
     "yaml": "^1.10.0"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
+    "@types/compression": "^1.7.0",
     "@types/cookie-parser": "^1.4.2",
     "@types/express": "^4.17.6",
     "@types/express-session": "^1.17.0",
@@ -46,7 +54,12 @@
     "@types/showdown": "^1.9.3",
     "@types/universal-analytics": "^0.4.4",
     "@types/yaml": "^1.9.7",
+    "@vue/component-compiler-utils": "^3.2.0",
     "ts-node-dev": "^1.0.0-pre.48",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.5",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }

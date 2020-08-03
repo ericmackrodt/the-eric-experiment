@@ -5,7 +5,7 @@
     "sourceMap": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "declaration": true,
+    "declaration": false,
     "target": "es5",
     "lib": ["ESNext", "dom"],
     "outDir": "./dist",
@@ -18,6 +18,6 @@
     "noFallthroughCasesInSwitch": true,
     "allowUnreachableCode": false
   },
-  "include": ["**/*.ts", "@types/*", "@types/**/*"],
+  "include": ["src/**/*.ts", "@types/*", "@types/**/*"],
   "exclude": ["node_modules"]
 }

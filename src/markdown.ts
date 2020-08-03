@@ -24,8 +24,21 @@ export function convertToHtml(req: Request, input: string) {
   return converter.makeHtml(input);
 }
 
-export function loadFromMarkdown(req: Request, ...pathParts: string[]) {
-  const filePath = path.join(...pathParts);
-  const content = fs.readFileSync(filePath).toString("utf-8");
-  return convertToHtml(req, content);
+export function loadFromMarkdown(
+  req: Request,
+  ...pathParts: string[]
+): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const filePath = path.join(...pathParts);
+    fs.readFile(filePath, (err, data) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      const content = data.toString("utf-8");
+      const result = convertToHtml(req, content);
+      resolve(result);
+    });
+  });
 }

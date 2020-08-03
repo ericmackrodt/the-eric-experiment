@@ -7,7 +7,7 @@ export function page(blogData: BlogData) {
   return async (req: Request, res: Response, next: NextFunction) => {
     try {
       const urlPath = req.params[0];
-      const content = loadFromMarkdown(
+      const content = await loadFromMarkdown(
         req,
         __dirname,
         "../../contents/pages",

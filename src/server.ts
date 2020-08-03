@@ -1,8 +1,9 @@
 import axios from "axios";
 import { urlencoded } from "body-parser";
+import * as compression from "compression";
 import * as cookieParser from "cookie-parser";
 import * as express from "express";
-import { Request } from "express";
+import { Request, Response } from "express";
 import * as session from "express-session";
 import * as useragent from "express-useragent";
 import * as fs from "fs";
@@ -15,6 +16,7 @@ import { page } from "./pages/page";
 import { post } from "./pages/post";
 import { tag } from "./pages/tag";
 import { Categories, MainMenuItem, PostMetadata, Tags } from "./types";
+import { isLegacy } from "./view-path";
 
 const tags: Tags = require("../contents/tags.json");
 const categories: Categories = require("../contents/categories.json");
@@ -24,9 +26,6 @@ const mainMenu: MainMenuItem[] = require("../contents/main-menu.json");
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.set("view engine", "vash");
-
-app.use("/assets", express.static("assets"));
 app.use(cookieParser());
 app.set("trust proxy", 1); // trust first proxy
 app.use(useragent.express());
@@ -42,6 +41,20 @@ app.use(
 app.use(ua.middleware("blah", { cookieName: "_ga" }));
 
 app.use(urlencoded({ extended: true }));
+
+function shouldCompress(req: Request, res: Response) {
+  if (isLegacy(req)) {
+    return false;
+  }
+
+  return compression.filter(req, res);
+}
+
+app.use(compression({ filter: shouldCompress }));
+
+app.set("view engine", "vash");
+
+app.use("/assets", express.static("assets"));
 
 async function processImage(req: Request, data: Buffer) {
   const fit = req.query.fit as

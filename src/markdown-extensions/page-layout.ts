@@ -53,7 +53,6 @@ function parser(getLayout: (layout: Layout, converter: Converter) => string) {
         type: "lang",
         filter(text: string, converter: Converter, options: ConverterOptions) {
           const LAYOUT_REGEX = /¨D¨D\s(content|right-content|left-content)\s¨D¨D([\s\S]*?(?=[\n\r].*?¨D|$))/g;
-          console.log(text);
 
           const layout: Layout = {};
 

@@ -106,6 +106,8 @@ typings/
 .sass-cache
 
 dist/
+assets/client.js
+assets/client.js.map
 assets/*.css
 assets/*.css.map
 contents/categories.json
