@@ -2,7 +2,9 @@ $$ content $$
 
 # Windows 3.x resource page
 
-Hello
+Welcome to the Windows 3.x resource page.
+
+## My Windows For Workgroups desktop circa 2004~2005
 
 [gallery]
 
@@ -12,7 +14,8 @@ Hello
 - ![Desktop](/pages/windows311/ericwi34.jpg)
 - ![Desktop](/pages/windows311/ericwi35.jpg)
 - ![Desktop](/pages/windows311/ericwi36.jpg)
-  [/gallery]
+
+[/gallery]
 
 What the hell
 

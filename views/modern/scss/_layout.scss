@@ -157,3 +157,22 @@ p {
     margin-bottom: 1rem;
   }
 }
+
+.gallery-container {
+  > div {
+    > ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      > li {
+        padding: 0.25rem;
+        border: 1px solid $grey100;
+        margin-bottom: 0.5rem;
+        margin-right: 0.5rem;
+        cursor: pointer;
+        box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
