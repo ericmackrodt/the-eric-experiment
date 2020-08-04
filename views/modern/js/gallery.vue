@@ -1,7 +1,7 @@
 <template>
   <div>
     <LightGallery
-      :images="images"
+      :images="fullImages"
       :index="index"
       :disable-scroll="true"
       @close="index = null"
@@ -12,7 +12,7 @@
         :key="thumbIndex"
         @click="index = thumbIndex"
       >
-        <img :src="thumb" />
+        <img :src="getThumb(thumbIndex)" />
       </li>
     </ul>
     <slot v-if="!loaded"></slot>
@@ -26,6 +26,11 @@ import { LightGallery } from "vue-light-gallery";
 export default {
   components: {
     LightGallery,
+  },
+  computed: {
+    fullImages() {
+      return this.images.map((i) => `/assets${i}`);
+    },
   },
   mounted() {
     const list = this.$slots.default[0];
@@ -44,6 +49,15 @@ export default {
       images: [],
       index: null,
     };
+  },
+  methods: {
+    getThumb(index) {
+      if (index === null) {
+        return;
+      }
+      const img = this.images[index];
+      return `/img/200/150${img}`;
+    },
   },
 };
 </script>
