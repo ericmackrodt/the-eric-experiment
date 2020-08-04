@@ -2,13 +2,14 @@ import { Converter } from "showdown";
 import "showdown-youtube";
 import "./markdown-extensions/netscape-youtube";
 import "./markdown-extensions/page-layout";
+import "./markdown-extensions/gallery";
 import * as path from "path";
 import * as fs from "fs";
 import { Request } from "express";
 import { isLegacy } from "./view-path";
 
 const COMMON: string[] = [];
-const EXTENSIONS = [...COMMON, "youtube", "page-layout"];
+const EXTENSIONS = [...COMMON, "youtube", "page-layout", "gallery"];
 const LEGACY_EXTENSIONS = [
   ...COMMON,
   "netscape-youtube",
