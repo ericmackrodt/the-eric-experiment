@@ -8,12 +8,12 @@ Welcome to the Windows 3.x resource page.
 
 [gallery]
 
-- ![Desktop](/pages/windows311/ericwin3.jpg)
-- ![Desktop](/pages/windows311/ericwi32.jpg)
-- ![Desktop](/pages/windows311/ericwi33.jpg)
-- ![Desktop](/pages/windows311/ericwi34.jpg)
-- ![Desktop](/pages/windows311/ericwi35.jpg)
-- ![Desktop](/pages/windows311/ericwi36.jpg)
+- ![Desktop](/pages/windows311/ericwin3-1.jpg)
+- ![Desktop](/pages/windows311/ericwin3-2.jpg)
+- ![Desktop](/pages/windows311/ericwin3-3.jpg)
+- ![Desktop](/pages/windows311/ericwin3-4.jpg)
+- ![Desktop](/pages/windows311/ericwin3-5.jpg)
+- ![Desktop](/pages/windows311/ericwin3-6.jpg)
 
 [/gallery]
 
