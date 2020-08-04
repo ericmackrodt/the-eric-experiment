@@ -12,5 +12,3 @@ Vue.component("gallery", Gallery);
 const vueApp = new Vue({
   el: "#root",
 });
-
-console.log("WHAT");

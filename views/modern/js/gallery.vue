@@ -41,7 +41,6 @@ export default {
         return img.data.attrs.src;
       });
     this.loaded = true;
-    console.log(this);
   },
   data() {
     return {
