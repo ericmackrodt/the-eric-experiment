@@ -9,4 +9,4 @@ In this part of The Eric Experiment, we will repair an NES which had an issue wi
 
 [Click here](https://www.youtube.com/watch?v=WDMRZrTfALg) to go to the Youtube Video.
 
-[![Fixing an NES](/externalimage/400/300?url=https://img.youtube.com/vi/WDMRZrTfALg/0.jpg&fill=cover)](https://www.youtube.com/watch?v=WDMRZrTfALg)
+![Fixing an NES](https://www.youtube.com/watch?v=WDMRZrTfALg)
