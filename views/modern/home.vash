@@ -35,7 +35,7 @@
 					</div>
 				</div>
 			</div>
-			<h2>Latest parts of the experiment</h2>
+			<h1>Latest parts of the experiment</h1>
 			@html.extend('modern/post-list', function () {})
 		</div>
 	})
