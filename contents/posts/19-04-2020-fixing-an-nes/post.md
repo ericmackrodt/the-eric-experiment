@@ -1,5 +1,5 @@
 title: Fixing an NES
-date: 07-06-2020
+date: 19-04-2020
 tags: retro gaming, NES, nintendo entertainment system, console repair
 category: Retro Gaming, Consoles
 image: img.jpg

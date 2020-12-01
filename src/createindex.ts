@@ -3,6 +3,7 @@ import * as path from "path";
 import { createInterface } from "readline";
 import { parse } from "yaml";
 import { PostMetadata } from "./types";
+import { DateTime } from "luxon";
 
 async function run() {
   var normalizedPath = path.join(__dirname, "../contents/posts");
@@ -49,6 +50,12 @@ async function run() {
 
   const results: PostMetadata[] = (await Promise.all(promises))
     .filter((o) => !!o)
+    .sort((a, b) => {
+      return (
+        DateTime.fromFormat(b.date, "dd-MM-yyyy").toMillis() -
+        DateTime.fromFormat(a.date, "dd-MM-yyyy").toMillis()
+      );
+    })
     .map((item) => ({
       categories: item.category.split(",").map((o: string) => o.trim()),
       tags: item.tags.split(",").map((o: string) => o.trim()),
