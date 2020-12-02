@@ -38,7 +38,7 @@ app.use(
   })
 );
 
-app.use(ua.middleware("blah", { cookieName: "_ga" }));
+app.use(ua.middleware("G-929KV9G874", { cookieName: "_ga" }));
 
 app.use(urlencoded({ extended: true }));
 
