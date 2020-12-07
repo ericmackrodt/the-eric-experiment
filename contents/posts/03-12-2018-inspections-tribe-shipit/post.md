@@ -13,7 +13,9 @@ I'm no designer, I'm a software engineer by profession, but in December 2018 we 
 I decided to go with a sythwave design because... It just looks cool okay?
 
 This is the logo I came up with:
-![Result](/post/asset/650/211/03-12-2018-inspections-tribe-shipit/img.jpg)
+
+![Result](/post/asset/650/311/03-12-2018-inspections-tribe-shipit/img.jpg)
 
 Here's how the t-shirt we made turned out:
+
 ![T-shirt](/post/asset/650/530/03-12-2018-inspections-tribe-shipit/t-shirt.jpg)
