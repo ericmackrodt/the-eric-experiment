@@ -1,7 +1,7 @@
 title: My cringe Minimal Beat cover
 date: 04-03-2013
-tags: retro gaming, NES, nintendo entertainment system, console repair
-category: Retro Gaming, Consoles
+tags: music, covers
+category: Music
 image: img.jpg
 description: Wanna cringe with me? Here's that time that I covered Lindsey Stirling's Minimal Beat
 
