@@ -15,7 +15,7 @@ At the time, the product itself didn't have its own logo, it basically shared it
 
 ![Covata Logo](/post/asset/500/124/01-03-2017-safe-share-logo/covata-logo.jpg)
 
-But since we're coming up with new products and such, we decided to come up with a logo for the product to distinguish it from the other ones.
+But since we were coming up with new products and such, we decided to come up with a logo for the product to distinguish it from the other ones.
 
 So they hired a design company and payed a few of thousands of dollars for them to come up with a design. After they came up with a few options they went around asking what people thought about the designs and when I saw them I thought: "Holy shit they look like crap".
 
