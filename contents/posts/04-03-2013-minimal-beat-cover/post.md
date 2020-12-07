@@ -1,7 +1,7 @@
 title: My cringe Minimal Beat cover
 date: 04-03-2013
 tags: music, covers
-category: Music
+category: Music, Videos
 image: img.jpg
 description: Wanna cringe with me? Here's that time that I covered Lindsey Stirling's Minimal Beat
 

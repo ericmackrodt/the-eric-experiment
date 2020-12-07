@@ -1,7 +1,7 @@
 title: Playstation 5 Launch Day
 date: 12-11-2020
 tags: gaming, ps5, playstation 5, launch day, preorder
-category: Gaming, Consoles
+category: Gaming, Consoles, Videos
 image: img.jpg
 description: I managed to get the PS5 on launch day, here's how it went.
 

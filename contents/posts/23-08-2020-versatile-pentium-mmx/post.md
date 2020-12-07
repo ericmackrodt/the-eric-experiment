@@ -1,7 +1,7 @@
 title: A versatile retro Pentium MMX build
 date: 23-08-2020
 tags: retro computing, windows 3.11, windows 95, ms-dos, windows 98, windows xp, hardware, retro software, intel, pentium, mmx, full throttle, lemmings
-category: Retro Computing
+category: Retro Computing, Videos
 image: img.jpg
 description: In this part of The Eric Experiment, we'll build an ultra compatible and versatile retro computer around the Intel Pentium MMX 233mhz.
 
