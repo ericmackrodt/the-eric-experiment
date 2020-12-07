@@ -3,7 +3,7 @@ date: 01-03-2017
 tags: design, logo
 category: Design
 image: img.jpg
-description: They wanted to come up with
+description: Okay, this is a cool story, I don't remember the exact date but ...
 
 Okay, this is a cool story, I don't remember the exact date but it was some time around February or March of 2017.
 
