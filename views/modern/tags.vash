@@ -2,7 +2,7 @@
   var tags = Object.keys(model.tags).map(o => ({
     label: o,
     count: model.tags[o].length
-  }));
+  })).sort((a, b) => b.count - a.count);
 }
 <h4>Tags</h4>
 <div id="tags">
