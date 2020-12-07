@@ -17,4 +17,4 @@ Anyways, this is the final result:
 
 [Click here](https://www.youtube.com/watch?v=s_rZwGTACEE) to go to the Youtube Video.
 
-![MacBook Pro 2015 | Totally a Mac Enthusiast](https://www.youtube.com/watch?v=s_rZwGTACEE)
+![Virtual assistant infinite loop](https://www.youtube.com/watch?v=s_rZwGTACEE)

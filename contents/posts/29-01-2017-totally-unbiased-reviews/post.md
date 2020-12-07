@@ -16,4 +16,4 @@ With the Eric Experiment videos, I decided to change my approach, I decided to t
 
 [Click here](https://www.youtube.com/watch?v=Hx4BuHeCAsE) to go to the Youtube Video.
 
-![MacBook Pro 2015 | Totally a Mac Enthusiast](https://www.youtube.com/watch?v=Hx4BuHeCAsE)
+![Xbox One S | Totally unbiased Reviews](https://www.youtube.com/watch?v=Hx4BuHeCAsE)
