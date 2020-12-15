@@ -1,6 +1,6 @@
 title: A failed experiment
 date: 14-12-2020
-tags: retro-computing, raid 0, sd cards, video, failed experiment
+tags: retro computing, raid 0, sd cards, video, failed experiment
 category: Retro Computing, Videos
 image: img.jpg
 description: I tried to run two SD cards in Raid 0 with a PCI RAID controller but it didn't work.
