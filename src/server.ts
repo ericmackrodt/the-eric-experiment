@@ -40,6 +40,16 @@ app.use(
 
 app.use(ua.middleware("G-929KV9G874", { cookieName: "_ga" }));
 
+app.use((req, _, next) => {
+  const visitor = ua("G-929KV9G874");
+  visitor.pageview(req.url, "http://ericmackrodt.com", "", (err) => {
+    if (err) {
+      throw err;
+    }
+  });
+  next();
+});
+
 app.use(urlencoded({ extended: true }));
 
 function shouldCompress(req: Request, res: Response) {
