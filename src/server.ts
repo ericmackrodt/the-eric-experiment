@@ -9,7 +9,6 @@ import * as useragent from "express-useragent";
 import * as fs from "fs";
 import * as path from "path";
 import * as sharp from "sharp";
-import * as ua from "universal-analytics";
 import { category } from "./pages/category";
 import { home } from "./pages/home";
 import { page } from "./pages/page";
@@ -37,18 +36,6 @@ app.use(
     cookie: { secure: false, httpOnly: true },
   })
 );
-
-app.use(ua.middleware("G-929KV9G874", { cookieName: "_ga" }));
-
-app.use((req, _, next) => {
-  const visitor = ua("G-929KV9G874");
-  visitor.pageview(req.url, "http://ericmackrodt.com", "", (err) => {
-    if (err) {
-      throw err;
-    }
-  });
-  next();
-});
 
 app.use(urlencoded({ extended: true }));
 
