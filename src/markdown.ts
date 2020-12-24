@@ -1,5 +1,5 @@
 import { Converter } from "showdown";
-import "showdown-youtube";
+import "./markdown-extensions/showdown-youtube";
 import "./markdown-extensions/netscape-youtube";
 import "./markdown-extensions/page-layout";
 import "./markdown-extensions/gallery";

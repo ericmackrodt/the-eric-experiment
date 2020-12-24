@@ -1,0 +1,16 @@
+#page {
+  padding: 1rem;
+  & h2,
+  h1 {
+    margin-bottom: 1rem;
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+  }
+
+  .media-item {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
