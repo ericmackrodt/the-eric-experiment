@@ -27,7 +27,7 @@ export function post(blogData: BlogData) {
         description: meta.description,
       };
 
-      const content = convertToHtml(req, lines.slice(6).join("\n"));
+      const content = convertToHtml(req, "", lines.slice(6).join("\n"));
 
       res.render(viewPath(req, "post"), {
         ...blogData,

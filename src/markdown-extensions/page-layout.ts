@@ -46,26 +46,39 @@ const getModernLayout = (layout: Layout, converter: Converter) => {
   );
 };
 
+function removeParagraph(text: string) {
+  const PARAGRAPH_REGEX = /(<p>\s*)(¨D¨D\s(content|right-content|left-content)\s¨D¨D)(\s*<\/p>)/g;
+
+  let match: RegExpExecArray;
+
+  while ((match = PARAGRAPH_REGEX.exec(text))) {
+    text = text.replace(match[0], match[2]);
+  }
+
+  return text;
+}
+
 function parser(getLayout: (layout: Layout, converter: Converter) => string) {
   return () => {
     return [
       {
         type: "lang",
         filter(text: string, converter: Converter, options: ConverterOptions) {
+          let output = removeParagraph(text);
           const LAYOUT_REGEX = /¨D¨D\s(content|right-content|left-content)\s¨D¨D([\s\S]*?(?=[\n\r].*?¨D|$))/g;
 
           const layout: Layout = {};
 
           let match: RegExpExecArray;
 
-          while ((match = LAYOUT_REGEX.exec(text))) {
+          while ((match = LAYOUT_REGEX.exec(output))) {
             const layoutPart = match[1];
             const content = match[2];
             layout[layoutPart] = converter.makeHtml(content);
           }
 
           if (Object.keys(layout).length < 1) {
-            return text;
+            return output;
           }
 
           return getLayout(layout, converter);

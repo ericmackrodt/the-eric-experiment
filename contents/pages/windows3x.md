@@ -1,6 +1,9 @@
+[wrap-with "./windows3x/layout.md"]
 $$ content $$
 
 # Windows 3.x resource page
+
+![Logos](/img/650/257/pages/windows311/title-screens.png)
 
 Welcome to the Windows 3.x resource page.
 
@@ -30,17 +33,3 @@ These are some screenshots from that computer.
 - ![Desktop](/pages/windows311/ericwin3-6.jpg)
 
 [/gallery]
-
-$$ left-content $$
-
-## Contents
-
-I will add content here over time.
-
-- Why?
-- Drivers
-- Web Browsing
-- Music
-- Gaming
-- Links
-- Dead websites

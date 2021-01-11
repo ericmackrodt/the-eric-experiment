@@ -23,7 +23,7 @@ const posts: PostMetadata[] = require("../contents/posts.json");
 const mainMenu: MainMenuItem[] = require("../contents/main-menu.json");
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
 
 app.use(cookieParser());
 app.set("trust proxy", 1); // trust first proxy

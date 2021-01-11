@@ -3,12 +3,14 @@ import "./markdown-extensions/showdown-youtube";
 import "./markdown-extensions/netscape-youtube";
 import "./markdown-extensions/page-layout";
 import "./markdown-extensions/gallery";
+import "./markdown-extensions/wrap-with";
+import "./markdown-extensions/page-menu";
 import * as path from "path";
 import * as fs from "fs";
 import { Request } from "express";
 import { isLegacy } from "./view-path";
 
-const COMMON: string[] = [];
+const COMMON: string[] = ["wrap-with", "page-menu"];
 const EXTENSIONS = [...COMMON, "youtube", "page-layout", "gallery"];
 const LEGACY_EXTENSIONS = [
   ...COMMON,
@@ -16,13 +18,22 @@ const LEGACY_EXTENSIONS = [
   "netscape-page-layout",
 ];
 
-export function convertToHtml(req: Request, input: string) {
+export function convertToHtml(req: Request, filePath: string, input: string) {
   const legacy = isLegacy(req);
 
   const converter = new Converter({
     extensions: legacy ? LEGACY_EXTENSIONS : EXTENSIONS,
+    filePath,
   });
-  return converter.makeHtml(input);
+  let output = converter.makeHtml(input);
+  // remove empty paragraphs
+  let match: RegExpExecArray;
+  const pRegex = /<p>\s*<\/p>/gm;
+  while ((match = pRegex.exec(output))) {
+    console.log(match);
+    output = output.replace(match[0], "");
+  }
+  return output;
 }
 
 export function loadFromMarkdown(
@@ -38,7 +49,8 @@ export function loadFromMarkdown(
       }
 
       const content = data.toString("utf-8");
-      const result = convertToHtml(req, content);
+      const folder = path.dirname(filePath);
+      const result = convertToHtml(req, folder, content);
       resolve(result);
     });
   });

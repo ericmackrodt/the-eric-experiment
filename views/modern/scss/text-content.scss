@@ -13,4 +13,27 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+
+  .page-menu {
+    margin-right: 1rem;
+    border: 1px solid $grey200;
+    background: $grey50;
+    padding: 1rem;
+    li {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+
+      a {
+        color: $main-blue;
+        text-decoration: none;
+        font-weight: $font-weight-regular;
+        font-size: 0.8rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
