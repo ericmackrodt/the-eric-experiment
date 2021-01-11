@@ -5,13 +5,20 @@ import "./markdown-extensions/page-layout";
 import "./markdown-extensions/gallery";
 import "./markdown-extensions/wrap-with";
 import "./markdown-extensions/page-menu";
+import "./markdown-extensions/image-wrap";
 import * as path from "path";
 import * as fs from "fs";
 import { Request } from "express";
 import { isLegacy } from "./view-path";
 
 const COMMON: string[] = ["wrap-with", "page-menu"];
-const EXTENSIONS = [...COMMON, "youtube", "page-layout", "gallery"];
+const EXTENSIONS = [
+  ...COMMON,
+  "youtube",
+  "page-layout",
+  "gallery",
+  "image-wrap",
+];
 const LEGACY_EXTENSIONS = [
   ...COMMON,
   "netscape-youtube",
