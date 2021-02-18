@@ -2,7 +2,5 @@
   { "path": "/", "label": "Home" },
   { "path": "/windows3x", "label": "Windows 3.x" },
   { "path": "/collection", "label": "Collection" },
-  { "path": "/game-guide", "label": "Game Guide" },
-  { "path": "/drivers", "label": "Drivers" },
   { "path": "/about-me", "label": "About me" }
 ]
