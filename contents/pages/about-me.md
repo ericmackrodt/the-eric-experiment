@@ -1,17 +1,12 @@
 $$ content $$
 
-# About me
+# Who is Eric anyway?
+## And why should I care?
+
+
+I'll tell you eventually
 
 <center>
   <img src="/assets/construction.gif" alt="under construction" />
 </center>
 
-$$ left-content $$
-
-## Left Header
-
-This is side content
-
-- item 1
-- item 2
-- item 3
