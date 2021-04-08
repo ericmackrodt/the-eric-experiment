@@ -1,6 +1,6 @@
 [
   { "path": "/", "label": "Home" },
   { "path": "/windows3x", "label": "Windows 3.x" },
-  { "path": "/collection", "label": "Collection" },
+  { "path": "/dreamcast", "label": "Dreamcast" },
   { "path": "/about-me", "label": "About me" }
 ]
