@@ -6,6 +6,7 @@ import "./markdown-extensions/gallery";
 import "./markdown-extensions/wrap-with";
 import "./markdown-extensions/page-menu";
 import "./markdown-extensions/image-wrap";
+import "./markdown-extensions/file-download";
 import * as path from "path";
 import * as fs from "fs";
 import { Request } from "express";
@@ -18,6 +19,8 @@ const EXTENSIONS = [
   "page-layout",
   "gallery",
   "image-wrap",
+  "file-download",
+  "download-link",
 ];
 const LEGACY_EXTENSIONS = [
   ...COMMON,
