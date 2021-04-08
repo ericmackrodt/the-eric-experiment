@@ -33,3 +33,27 @@ Regardless, as I say in the video, Browservice is probably my choice in proxy se
 
 ![Today's Web on Old Browsers](https://www.youtube.com/watch?v=LNaQC-5VkGw)
 
+I actually had to re-upload this video which means that I lost the views and comments from my previous one.
+
+The reason for this is that I usually use google ads to promote my videos when they come out but, this time, Google was blocking this video from being advertised.
+
+The reason they gave me was that it dealt with "sensitive subjects".
+
+I know right, old browsers, a sensitive subject? That doesn't make any sense.
+
+And the worst thing is that they just say "sensitive subject" but they don't tell you what the actual issue is.
+
+I tried to appeal, contact google ads support and such with no luck.
+
+So I went through the video carefully to see if there was anything that could've triggered that and the only thing I could come up with was some screen captures of wikipedia and google search that showed some current topics.
+
+I went into the youtube edits and blurred everything that had to do with politics. That didn't help.
+
+Then I went in again and found two instances where a screen capture showed the name of the famous pandemic we're going through, It's like Voldemort, you should never have any reference to it's name. One of the instances where the name appeared was in google's own search suggestions in a screen capture, so ironic!
+
+So I went into the Youtube Editor and tried to blur those as well, after I confirmed my video was being processed for over 14 hours! It basically got stuck processing!
+
+After contacting team youtube on Twitter, they recommended deleting the video and re-uploading it, so I did that reluctantly making sure I blurred anything that could be considered a sensitive subject in the screen captures.
+
+And here's where we are today, with a re-upload that definitely hurts my already struggling channel. That's awesome!
+
