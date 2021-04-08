@@ -17,4 +17,4 @@ Anyway, make sure to check the video on Youtube and let me know what you thought
 
 [Click here](https://www.youtube.com/watch?v=gk507yyypCM) to go to the Youtube Video.
 
-![A versatile retro Pentium MMX build](https://www.youtube.com/watch?v=gk507yyypCM)
+![PS5 on a 1965 CRT TV](https://www.youtube.com/watch?v=gk507yyypCM)
