@@ -91,6 +91,10 @@ p {
         text-decoration: none;
         border-bottom: 0;
       }
+
+      &:not(:last-child) {
+        padding-right: 1.5rem;
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
   <div class="desktop">
     <slot v-bind:minimize="minimize" v-bind:isMinimized="isMinimized"></slot>
 
-    <div class="icons">
+    <div class="icons" v-if="minimizedWindows.length > 0">
       <div
         class="icon"
         v-for="window in minimizedWindows"
