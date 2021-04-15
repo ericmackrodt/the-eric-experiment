@@ -25,13 +25,4 @@ Come to think of it, I think it was around 2003~2004 because I got a Pentium 4 i
 
 These are some screenshots from that computer.
 
-[gallery]
-
-- ![Desktop](/pages/windows311/ericwin3-1.jpg)
-- ![Desktop](/pages/windows311/ericwin3-2.jpg)
-- ![Desktop](/pages/windows311/ericwin3-3.jpg)
-- ![Desktop](/pages/windows311/ericwin3-4.jpg)
-- ![Desktop](/pages/windows311/ericwin3-5.jpg)
-- ![Desktop](/pages/windows311/ericwin3-6.jpg)
-
-[/gallery]
+[gallery "/contents/pages/windows3x/gallery.json"]

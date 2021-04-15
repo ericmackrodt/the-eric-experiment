@@ -43,8 +43,6 @@ So I decided to build my own dreamcast with everything I would have been crazy a
 
 ![A Custom Dreamcast Build](https://www.youtube.com/watch?v=ddM8N19WhWs)
 
-
-
 ## Ripping games ##
 
 To use the GD-EMU, I have ripped my games. There are a few methods you can use to do it, the best one probably being the one that uses the Broadband Adaptor to download the disc files on your computer as Adam Koralik outlines here:

@@ -10,6 +10,7 @@ import * as fs from "fs";
 import * as path from "path";
 import * as sharp from "sharp";
 import { category } from "./pages/category";
+import { gallery } from "./pages/gallery";
 import { home } from "./pages/home";
 import { page } from "./pages/page";
 import { post } from "./pages/post";
@@ -63,15 +64,38 @@ async function processImage(req: Request, data: Buffer) {
     | "inside"
     | "outside";
 
-  const originalWidth = parseInt(req.params.width);
-  let width = originalWidth;
-  let height = parseInt(req.params.height);
+  let width: number = 0;
+  let originalWidth = 0;
+  let height: number = 0;
 
-  if (smaller && !fullSize) {
-    if (width > 500) {
-      width = 500;
+  const image = sharp(data);
 
-      height = Math.floor((height * width) / originalWidth);
+  // God, the code here is horrible
+  // But it works...
+  if (!req.params.width && !req.params.height) {
+    const metadata = await image.metadata();
+    debugger;
+    width = metadata.width || 0;
+    originalWidth = width;
+    height = metadata.height || 0;
+
+    if (smaller && !fullSize) {
+      if (width > 700) {
+        width = 700;
+
+        height = Math.floor((height * width) / originalWidth);
+      }
+    }
+  } else {
+    originalWidth = parseInt(req.params.width);
+    width = originalWidth;
+    height = parseInt(req.params.height);
+    if (smaller && !fullSize) {
+      if (width > 500) {
+        width = 500;
+
+        height = Math.floor((height * width) / originalWidth);
+      }
     }
   }
 
@@ -112,6 +136,18 @@ app.get("/img/:width/:height/*", async (req, res, next) => {
   }
 });
 
+app.get("/full-assets/*", async (req, res, next) => {
+  try {
+    const param = req.params[0];
+    const buffer = fs.readFileSync(path.join(__dirname, "../assets", param));
+    const result = await processImage(req, buffer);
+    res.type("jpg");
+    res.send(result);
+  } catch (_) {
+    next();
+  }
+});
+
 app.get("/externalImage/:width/:height", async (req, res) => {
   const url = req.query.url as string;
   const response = await axios.get(url, { responseType: "arraybuffer" });
@@ -124,6 +160,7 @@ app.get("/", home({ tags, categories, posts, mainMenu }));
 app.get("/category", category({ tags, categories, posts, mainMenu }));
 app.get("/tag", tag({ tags, categories, posts, mainMenu }));
 app.get("/post/:id", post({ tags, categories, posts, mainMenu }));
+app.get("/gallery/:index/*", gallery({ tags, categories, posts, mainMenu }));
 app.get("/*", page({ tags, categories, posts, mainMenu }));
 
 app.listen(port, () =>

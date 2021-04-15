@@ -31,3 +31,9 @@ export type PageModel = {
 export type HomeTemplate = (model: HomeModel) => string;
 
 export type PageTemplate = (model: PageModel) => string;
+
+export type Gallery = {
+  page: string;
+  subTitle: string;
+  items: string[];
+};

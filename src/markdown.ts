@@ -30,6 +30,7 @@ const LEGACY_EXTENSIONS = [
   "netscape-page-layout",
   "legacy-headers",
   "netscape-page-menu",
+  "legacy-gallery",
 ];
 
 export function convertToHtml(req: Request, filePath: string, input: string) {

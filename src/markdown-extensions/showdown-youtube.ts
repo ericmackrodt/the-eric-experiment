@@ -37,10 +37,8 @@ function parseDimensions(rest: any, options: ConverterOptions) {
   defaultWidth = options.youtubeWidth ? options.youtubeWidth : 420;
   defaultHeight = options.youtubeHeight ? options.youtubeHeight : 315;
 
-  if (rest) {
-    width = (d = /width="(.+?)"/.exec(rest)) ? d[1] : defaultWidth;
-    height = (d = /height="(.+?)"/.exec(rest)) ? d[1] : defaultHeight;
-  }
+  width = (d = /width="(.+?)"/.exec(rest || "")) ? d[1] : defaultWidth;
+  height = (d = /height="(.+?)"/.exec(rest || "")) ? d[1] : defaultHeight;
 
   // add units so they can be used in css
   if (/^\d+$/gm.exec(width.toString())) {
