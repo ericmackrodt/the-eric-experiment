@@ -20,9 +20,8 @@ const EXTENSIONS = [
   "page-layout",
   "gallery",
   "image-wrap",
-  "file-download",
-  "download-link",
   "page-menu",
+  "file-download",
 ];
 const LEGACY_EXTENSIONS = [
   ...COMMON,
@@ -31,6 +30,7 @@ const LEGACY_EXTENSIONS = [
   "legacy-headers",
   "netscape-page-menu",
   "legacy-gallery",
+  "legacy-file-download",
 ];
 
 export function convertToHtml(req: Request, filePath: string, input: string) {
