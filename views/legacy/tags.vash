@@ -4,7 +4,18 @@
     count: model.tags[o].length
   }));
 }
-<h3>Tags</h3>
+
+<table cellspacing="0" border="0" cellpadding="2">
+<tr>
+<td align="center" bgcolor="#DDDDDD">
+<font face="arial" size="3">
+  <b>Tags</b>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+<font face="arial" size="-1">
 @tags.forEach(function (item, index) {
   @{
     var isLast = index === (tags.length - 1);
@@ -14,3 +25,7 @@
   </a>
   @(isLast ? '' : ' | ')
 })
+</font>
+</td>
+</tr>
+</table>

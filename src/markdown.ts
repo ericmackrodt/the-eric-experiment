@@ -7,6 +7,7 @@ import "./markdown-extensions/wrap-with";
 import "./markdown-extensions/page-menu";
 import "./markdown-extensions/image-wrap";
 import "./markdown-extensions/file-download";
+import "./markdown-extensions/legacy-headers";
 import * as path from "path";
 import * as fs from "fs";
 import { Request } from "express";
@@ -26,6 +27,7 @@ const LEGACY_EXTENSIONS = [
   ...COMMON,
   "netscape-youtube",
   "netscape-page-layout",
+  "legacy-headers",
 ];
 
 export function convertToHtml(req: Request, filePath: string, input: string) {

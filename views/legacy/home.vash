@@ -1,8 +1,18 @@
 @html.extend('legacy/layout', function(model){
 	@html.block('content', function(model){
-		@html.raw(model.intro)
+		<font size="-1" face="arial">
+			@html.raw(model.intro)
+		</font>
 
-		<h3>Latest parts of the experiment</h3>
+		<font face="arial" size="4">
+			<b>Latest parts of the experiment</b>
+		</font>
+		<br>
+		<img src="/assets/nothing.gif" width="1" height="10">
+		<br>
+		<img src="/assets/black_pixel.gif" width="100%" height="1">
+		<br>
+		<img src="/assets/nothing.gif" width="1" height="10">
 		@html.extend('legacy/post-list', function () {})
 	})
 })

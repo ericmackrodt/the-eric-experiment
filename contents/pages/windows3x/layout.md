@@ -4,9 +4,9 @@ $$ left-content $$
 
 [page-menu]
 
-- [Why?](/windows3x)
-- [Drivers](/windows3x)
 - [Web Browsing](/windows3x)
+- [Drivers](/windows3x)
+- [Essential Software](/windows3x)
 - [Music](/windows3x)
 - [Gaming](/windows3x)
 - [Links](/windows3x)

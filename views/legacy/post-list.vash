@@ -5,7 +5,7 @@
       var isLast = index === (model.posts.length - 1);
     }
     <tr>
-      <td rowspan="3" width="143">
+      <td width="143" valign="top">
         <a href="/post/@item.filename">
           <img
             src="/post/asset/143/80/@image?fit=cover"
@@ -15,28 +15,39 @@
           />
         </a>
       </td>
+      <td width="13" valign="top">
+        <img src="/assets/nothing.gif" width="13" height="1">
+      </td>
       <td valign="top">
         <a href="/post/@item.filename">
-          <font size="4" color="#000000" face="arial">
+          <font size="3" color="#000000" face="arial">
             <b>@item.title</b>
           </font>
         </a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        @item.description
-      </td>
-    </td>
-    <tr>
-      
-      <td>
-        <font size="3" color="#DDDDDD">
+        <br>
+        <img src="/assets/nothing.gif" width="1" height="5">
+        <br>
+        <font face="arial" size="-1">
+          @item.description
+        </font>
+        <br>
+        <img src="/assets/nothing.gif" width="1" height="5">
+        <br>
+        <font size="-1" face="arial" color="#DDDDDD">
           @item.date
         </font>
       </td>
     </tr>
 
-    @(isLast ? '' : html.raw('<tr><td colspan="2"><hr /></td></tr>'))
+    @if (!isLast) {
+      <tr><td colspan="3">
+      <img src="/assets/nothing.gif" width="1" height="10">
+      <br>
+      <img src="/assets/black_pixel.gif" width="100%" height="1">
+      <br>
+      <img src="/assets/nothing.gif" width="1" height="10">
+      </td>
+      </tr>
+    }
   })
 </table>
