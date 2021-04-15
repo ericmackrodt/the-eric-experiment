@@ -17,7 +17,7 @@ async function run() {
         const exists = fs.existsSync(postPath);
 
         if (!exists) {
-          resolve();
+          resolve(undefined);
           return;
         }
 

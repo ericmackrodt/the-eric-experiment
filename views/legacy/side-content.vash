@@ -1,6 +1,9 @@
 @{
   var categories = Object.keys(model.categories);
 }
+<td width="5" valign="top">
+  <img src="/assets/nothing.gif" width="5" height="1">
+</td>
 <td valign="top" width="150">
   <table cellspacing="0" cellpadding="2" border="0" width="100%">
     <tr>

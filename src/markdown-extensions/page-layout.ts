@@ -8,14 +8,32 @@ const getLegacyLayout = (layout: Layout, converter: Converter) => {
       '<table cellspacing="0" sellpadding="0" border="0">',
       "<tr>",
       layout["left-content"] &&
-        ['<td valign="top" width="200">', layout["left-content"], "</td>"].join(
-          ""
-        ),
+        [
+          '<td valign="top" width="150">',
+          layout["left-content"],
+          "</td>",
+          '<td width="10" valign="top">',
+          '<img src="/assets/nothing.gif" width="10" height="1">',
+          "</td>",
+        ].join(""),
+
       layout["content"] &&
-        ['<td valign="top">', layout["content"], "</td>"].join(""),
+        [
+          '<td valign="top">',
+          '<font face="arial" size="-1">',
+          layout["content"],
+          "</font>",
+          "</td>",
+          '<td width="5" valign="top">',
+          '<img src="/assets/nothing.gif" width="5" height="1">',
+          "</td>",
+        ].join(""),
       layout["right-content"] &&
         [
-          '<td valign="top" width="200">',
+          '<td width="5" valign="top">',
+          '<img src="/assets/nothing.gif" width="5" height="1">',
+          "</td>",
+          '<td valign="top" width="150">',
           layout["right-content"],
           "</td>",
         ].join(""),

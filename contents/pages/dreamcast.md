@@ -2,7 +2,7 @@ $$ left-content $$
 
 [page-menu]
 
-- [Welcome](#welcometothesegadreamcastresourcepage)
+- [Welcome](#segadreamcastresourcepage)
 - [My custom build](#mycustombuild)
 - [Ripping Games](#rippinggames)
 - [Favorite Games](#favoritegames)
@@ -11,7 +11,9 @@ $$ left-content $$
 
 $$ content $$
 
-# Welcome to the Sega Dreamcast resource page #
+# Sega Dreamcast resource page #
+
+Welcome to the Sega Dreamcast resource page
 
 ![Logos](/img/650/136/pages/dreamcast/logo.jpg)
 
@@ -40,6 +42,8 @@ With that in mind, there is still a great reason for having a GDEMU, playing bac
 So I decided to build my own dreamcast with everything I would have been crazy about when I was a kid, this was a really fun part of The Experiment to make, so here's the link to the video of the build below:
 
 ![A Custom Dreamcast Build](https://www.youtube.com/watch?v=ddM8N19WhWs)
+
+
 
 ## Ripping games ##
 

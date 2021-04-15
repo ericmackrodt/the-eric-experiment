@@ -20,31 +20,18 @@ function showdownEscapes(text: string) {
   return text;
 }
 
-extension("wrap-with", function() {
+extension("inject-md", function() {
   return [
     {
       type: "lang",
       filter(text: string, converter: Converter) {
-        const GALLERY_REGEX = /\[wrap-with[\s]+"(.+)"\]/gm;
+        const INJECT_REGEX = /\[inject-md[\s]+"(.+)"\]/gm;
 
-        let match: RegExpExecArray;
-        let output = text;
-
-        while ((match = GALLERY_REGEX.exec(output))) {
-          output = output.replace(match[0], "");
-          const wrapPath = match[1];
+        return text.replace(INJECT_REGEX, function(_, injectPath) {
           const filePath = converter.getOption("filePath");
-          const finalPath = path.join(filePath, wrapPath);
-          const imported = showdownEscapes(
-            fs.readFileSync(finalPath).toString("utf-8")
-          );
-
-          output = imported.replace(/\[inject-here\]/gm, output);
-
-          output = converter.makeHtml(output);
-        }
-
-        return output;
+          const finalPath = path.join(filePath, injectPath);
+          return showdownEscapes(fs.readFileSync(finalPath).toString("utf-8"));
+        });
       },
     },
   ];

@@ -1,7 +1,3 @@
-[inject-here]
-
-$$ left-content $$
-
 [page-menu]
 
 - [Web Browsing](/windows3x)

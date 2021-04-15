@@ -1,7 +1,9 @@
-[wrap-with "./windows3x/layout.md"]
-$$ content $$
+$$ left-content $$
 
-# Windows 3.x resource page
+[inject-md "/windows3x/menu.md"]
+
+$$ content $$
+# Windows 3.x resource page #
 
 Welcome to the Windows 3.x resource page.
 

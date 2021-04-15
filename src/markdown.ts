@@ -3,7 +3,7 @@ import "./markdown-extensions/showdown-youtube";
 import "./markdown-extensions/netscape-youtube";
 import "./markdown-extensions/page-layout";
 import "./markdown-extensions/gallery";
-import "./markdown-extensions/wrap-with";
+import "./markdown-extensions/inject-md";
 import "./markdown-extensions/page-menu";
 import "./markdown-extensions/image-wrap";
 import "./markdown-extensions/file-download";
@@ -13,7 +13,7 @@ import * as fs from "fs";
 import { Request } from "express";
 import { isLegacy } from "./view-path";
 
-const COMMON: string[] = ["wrap-with", "page-menu"];
+const COMMON: string[] = ["inject-md"];
 const EXTENSIONS = [
   ...COMMON,
   "youtube",
@@ -22,12 +22,14 @@ const EXTENSIONS = [
   "image-wrap",
   "file-download",
   "download-link",
+  "page-menu",
 ];
 const LEGACY_EXTENSIONS = [
   ...COMMON,
   "netscape-youtube",
   "netscape-page-layout",
   "legacy-headers",
+  "netscape-page-menu",
 ];
 
 export function convertToHtml(req: Request, filePath: string, input: string) {
@@ -42,7 +44,6 @@ export function convertToHtml(req: Request, filePath: string, input: string) {
   let match: RegExpExecArray;
   const pRegex = /<p>\s*<\/p>/gm;
   while ((match = pRegex.exec(output))) {
-    console.log(match);
     output = output.replace(match[0], "");
   }
   return output;

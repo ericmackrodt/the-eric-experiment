@@ -23,7 +23,7 @@ const posts: PostMetadata[] = require("../contents/posts.json");
 const mainMenu: MainMenuItem[] = require("../contents/main-menu.json");
 
 const app = express();
-const port = process.env.PORT || 3002;
+const port = process.env.PORT || 3003;
 
 app.use(cookieParser());
 app.set("trust proxy", 1); // trust first proxy
@@ -54,14 +54,27 @@ app.set("view engine", "vash");
 app.use("/assets", express.static("assets"));
 
 async function processImage(req: Request, data: Buffer) {
+  const fullSize = req.query.fullSize === "true";
+  const smaller = isLegacy(req);
   const fit = req.query.fit as
     | "fill"
     | "contain"
     | "cover"
     | "inside"
     | "outside";
-  const width = parseInt(req.params.width);
-  const height = parseInt(req.params.height);
+
+  const originalWidth = parseInt(req.params.width);
+  let width = originalWidth;
+  let height = parseInt(req.params.height);
+
+  if (smaller && !fullSize) {
+    if (width > 500) {
+      width = 500;
+
+      height = Math.floor((height * width) / originalWidth);
+    }
+  }
+
   return sharp(data)
     .resize(width, height, {
       fit,

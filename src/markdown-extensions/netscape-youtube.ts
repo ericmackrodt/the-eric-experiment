@@ -5,8 +5,12 @@ const fullYoutubeRegex = /(?:(?:https?:)?(?:\/\/)?)(?:(?:www)?\.)?youtube\.(?:.+
 const shortYoutubeRegex = /(?:(?:https?:)?(?:\/\/)?)?youtu\.be\/([a-zA-Z0-9_-]{11})/i;
 const vimeoRegex = /(?:(?:https?:)?(?:\/\/)?)(?:(?:www)?\.)?vimeo.com\/(\d+)/;
 
-const html =
-  '<a href="%1" target="_blank"><img src="/externalimage/%3/%4?url=%2?fill=cover" width="%3" height="%4" alt="%5" /></a>';
+const html = [
+  '<a href="%1" target="_blank"><img src="/externalimage/%3/%4?url=%2?fill=cover" width="%3" height="%4" alt="%5" /></a>',
+  "<br>",
+  '<img src="/assets/nothing.gif" width="100%" height="10">',
+  "<br>",
+].join("");
 
 function parseProperties(rest: string, options: ConverterOptions) {
   let width: string;
@@ -33,15 +37,15 @@ function parseProperties(rest: string, options: ConverterOptions) {
 /**
  * Replace with video iframes
  */
-extension("netscape-youtube", function () {
+extension("netscape-youtube", function() {
   return [
     {
       // It's a bit hackish but we let the core parsers replace the reference image for an image tag
       // then we replace the full img tag in the output with our iframe
       type: "output",
-      filter: function (text, converter, options) {
+      filter: function(text, converter, options) {
         const tag = html;
-        return text.replace(imgRegex, function (match, url, rest) {
+        return text.replace(imgRegex, function(match, url, rest) {
           const props = parseProperties(rest, options);
           let m: RegExpExecArray;
           let fUrl = "";

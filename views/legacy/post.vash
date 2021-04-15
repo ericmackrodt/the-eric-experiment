@@ -27,7 +27,17 @@
 	})
 
 	@html.block('content', function(model){
-		<h1>@model.metadata.title</h1>
+		<font face="arial" size="-1">
+		<font size="5">
+			<b>@model.metadata.title</b>
+		</font>
+		<br>
+		<img src="/assets/nothing.gif" width="1" height="5">
+		<br>
+		<img src="/assets/black_pixel.gif" width="100%" height="1">
+		<br>
+		<img src="/assets/nothing.gif" width="1" height="10">
+		<br>
     <b>Published: </b>@model.metadata.date
 		<br />
 		<b>Tags: </b> @model.metadata.tags.forEach(function (item, index) {
@@ -36,6 +46,7 @@
 			}
 			<a href="/tag?id=@item">@item</a>@(isLast ? '' : ', ')
 		})
-    @html.raw(model.content)
+		@html.raw(model.content)
+		</font>
 	})
 })
