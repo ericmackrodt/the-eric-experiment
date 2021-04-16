@@ -52,18 +52,26 @@ extension("legacy-file-download", function() {
           );
 
           return [
-            '<table cellspacing="1" border="0" cellpadding="2">',
+            '<table cellspacing="1" border="0" cellpadding="2" width="100%">',
             "<tr>",
-            `<td bgcolor="#DDDDDD"><font size="-1"><b>${name}</b></font></td>`,
-            `<td bgcolor="#DDDDDD" align="right"><a href="${url}" target="_blank"><img src="/img/14/14/floppy.png" alt="Download"><img src="/assets/nothing.gif" width="5" height="14"><font size="-1">${file}</font></a></td>`,
+            `<td bgcolor="#DDDDDD"><font size="-1" face="arial"><b>${name}</b></font></td>`,
+            '<td bgcolor="#DDDDDD" align="right" valign="top">',
+            `<a href="${url}" target="_blank">`,
+            '<img src="/img/12/12/floppy.png" alt="Download" border="0">',
+            '<img src="/assets/nothing.gif" width="5" height="12" border="0">',
+            "</a>",
+            `<a href="${url}" target="_blank">`,
+            `<font size="2" face="arial">${file}</font></a></td>`,
             "</tr>",
             '<tr><td bgcolor="#DDDDDD" colspan="2">',
             '<font size="-1">',
             converter.makeHtml(description),
             "</font>",
             "</td></tr>",
+            '<tr><td colspan="2">',
+            '<img src="/assets/nothing.gif" width="500" height="2">',
+            "</td></td>",
             "</table>",
-            '<img src="/assets/nothing.gif" width="100" height="0">',
           ].join("");
         });
       },

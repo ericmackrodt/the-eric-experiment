@@ -3,6 +3,15 @@ import { extension, Converter, ConverterOptions } from "showdown";
 type Layout = Record<string, string>;
 
 const getLegacyLayout = (layout: Layout, converter: Converter) => {
+  let contentWidth = 700;
+  if (layout["left-content"]) {
+    contentWidth = contentWidth - 150;
+  }
+
+  if (layout["right-content"]) {
+    contentWidth = contentWidth - 150;
+  }
+
   return converter.makeHtml(
     [
       '<table cellspacing="0" sellpadding="0" border="0">',
@@ -19,7 +28,7 @@ const getLegacyLayout = (layout: Layout, converter: Converter) => {
 
       layout["content"] &&
         [
-          '<td valign="top">',
+          `<td valign="top" width="${contentWidth}">`,
           '<font face="arial" size="-1">',
           layout["content"],
           "</font>",

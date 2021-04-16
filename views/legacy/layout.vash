@@ -9,27 +9,33 @@
 </head>
 <body bgcolor="#000000" text="#000000" background="/assets/starfiel.gif">
 <center>
-  <table width="700" bgcolor="#ffffff" cellpadding="0" cellspacing="5" border="0">
-    <tr>
-      <td colspan="@columns"><img src="/img/700/150/header.jpg?fullSize=true" alt="The Eric Experiment" border="0" /></td>
-    </tr>
-    <tr>
-      <td colspan="@columns" bgcolor="#1238B3">
-        @html.extend('legacy/top-menu', function () {})
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" width="500">
-        @html.block('content')
-      </td>
-      @(model.showSideContent ? html.extend('legacy/side-content', function() {}) : '')
-    </tr>
-    <tr>
-      <td colspan="@columns" align="center">
-        @html.extend('legacy/tags', function () {})
-      </td>
-    </tr>
-  </table>
+<table width="700" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td bgcolor="#ffffff">
+      <table width="100%" cellpadding="0" cellspacing="5" border="0">
+        <tr>
+          <td colspan="@columns"><img src="/img/700/150/header.jpg?fullSize=true" alt="The Eric Experiment" border="0" /></td>
+        </tr>
+        <tr>
+          <td colspan="@columns" bgcolor="#1238B3">
+            @html.extend('legacy/top-menu', function () {})
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="500">
+            @html.block('content')
+          </td>
+          @(model.showSideContent ? html.extend('legacy/side-content', function() {}) : '')
+        </tr>
+        <tr>
+          <td colspan="@columns" align="center">
+            @html.extend('legacy/tags', function () {})
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
 </center>
 </body>
 </html>

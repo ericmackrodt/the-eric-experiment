@@ -24,7 +24,7 @@ const posts: PostMetadata[] = require("../contents/posts.json");
 const mainMenu: MainMenuItem[] = require("../contents/main-menu.json");
 
 const app = express();
-const port = process.env.PORT || 3003;
+const port = process.env.PORT ? parseInt(process.env.PORT) : 3003;
 
 app.use(cookieParser());
 app.set("trust proxy", 1); // trust first proxy
@@ -163,6 +163,6 @@ app.get("/post/:id", post({ tags, categories, posts, mainMenu }));
 app.get("/gallery/:index/*", gallery({ tags, categories, posts, mainMenu }));
 app.get("/*", page({ tags, categories, posts, mainMenu }));
 
-app.listen(port, () =>
+app.listen(port, "0.0.0.0", 0, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );

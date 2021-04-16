@@ -6,10 +6,12 @@ const shortYoutubeRegex = /(?:(?:https?:)?(?:\/\/)?)?youtu\.be\/([a-zA-Z0-9_-]{1
 const vimeoRegex = /(?:(?:https?:)?(?:\/\/)?)(?:(?:www)?\.)?vimeo.com\/(\d+)/;
 
 const html = [
-  '<a href="%1" target="_blank"><img src="/externalimage/%3/%4?url=%2?fill=cover" width="%3" height="%4" alt="%5" /></a>',
+  "<center>",
+  '<a href="%1" target="_blank"><img src="/externalimage/%3/%4?url=%2?fill=cover" width="%3" height="%4" alt="%5" border="0" /></a>',
   "<br>",
   '<img src="/assets/nothing.gif" width="100%" height="10">',
   "<br>",
+  "</center>",
 ].join("");
 
 function parseProperties(rest: string, options: ConverterOptions) {

@@ -49,7 +49,7 @@ extension("legacy-gallery", function() {
                   `<a href="/gallery/${index}${injectPath.replace(
                     ".json",
                     ""
-                  )}"><img src="/img/120/90${item}"><img src="/assets/nothing.gif" width="5" height="90">`
+                  )}"><img src="/img/120/90${item}" border="0"><img src="/assets/nothing.gif" width="5" height="90" border="0">`
               )
               .join(""),
             "</p>",

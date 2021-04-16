@@ -14,9 +14,9 @@ $$ content $$
 # Sega Dreamcast resource page #
 
 Welcome to the Sega Dreamcast resource page
-
-![Logos](/img/650/136/pages/dreamcast/logo.jpg)
-
+<center>
+  <img src="/img/650/136/pages/dreamcast/logo.jpg" alt="Logos">
+</center>
 The Sega Dreamcast is one of my favorite consoles of all time, and a console I have a bit of a sad history with.
 
 I really wanted one when I was younger, around 2003 or 2004, but my parents didn't have much money and I didn't have a job, so the idea of getting any video game console seemed a bit out of reach at the time.
@@ -114,5 +114,5 @@ You can prepare the GD-EMU sd card by using the SD CARD MAKER for GDEMU availabl
 These are my favorite games on the dreamcast.
 
 <center>
-  <img src="/assets/construction.gif" alt="under construction" />
+  <img src="/assets/construction.gif" alt="under construction" width="400" />
 </center>

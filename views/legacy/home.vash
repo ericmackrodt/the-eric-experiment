@@ -3,15 +3,11 @@
 		<font size="-1" face="arial">
 			@html.raw(model.intro)
 		</font>
-
 		<font face="arial" size="4">
 			<b>Latest parts of the experiment</b>
-		</font>
-		<br>
-		<img src="/assets/nothing.gif" width="1" height="10">
-		<br>
-		<img src="/assets/black_pixel.gif" width="100%" height="1">
-		<br>
+		</font><br>
+		<img src="/assets/nothing.gif" width="1" height="10"><br>
+		<img src="/assets/black_pixel.gif" width="100%" height="1"><br>
 		<img src="/assets/nothing.gif" width="1" height="10">
 		@html.extend('legacy/post-list', function () {})
 	})
