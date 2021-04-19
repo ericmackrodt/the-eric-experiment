@@ -9,10 +9,14 @@ import { convertToHtml } from "../markdown";
 export function post(blogData: BlogData) {
   return async (req: Request, res: Response, next: NextFunction) => {
     try {
+      const dirname = path.join(
+        __dirname,
+        "../../contents/posts",
+        req.params.id
+      );
+
       const post = fs
-        .readFileSync(
-          path.join(__dirname, "../../contents/posts", req.params.id, "post.md")
-        )
+        .readFileSync(path.join(dirname, "post.md"))
         .toString("utf-8");
 
       const lines = post.split("\n");
@@ -27,7 +31,7 @@ export function post(blogData: BlogData) {
         description: meta.description,
       };
 
-      const content = convertToHtml(req, "", lines.slice(6).join("\n"));
+      const content = convertToHtml(req, dirname, lines.slice(6).join("\n"));
 
       res.render(viewPath(req, "post"), {
         ...blogData,

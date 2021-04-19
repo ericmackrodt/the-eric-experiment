@@ -8,6 +8,18 @@
     }
   }
 
+  .content {
+    ul {
+      list-style: disc;
+      margin-left: 1rem;
+      font-weight: $font-weight-regular;
+
+      > li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
   p {
     text-align: justify;
     text-justify: inter-word;

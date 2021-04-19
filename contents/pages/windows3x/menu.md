@@ -1,11 +1,11 @@
 [page-menu]
 
-- [Web Browsing](/windows3x)
-- [Drivers](/windows3x)
-- [Essential Software](/windows3x)
-- [Music](/windows3x)
-- [Gaming](/windows3x)
-- [Links](/windows3x)
-- [Dead websites](/windows3x)
+- [Web Browsing](/windows3x/webbrowsing)
+- [Drivers](/windows3x/drivers)
+- [Essential Software](/windows3x/essentialsoftware)
+- [Music](/windows3x/music)
+- [Gaming](/windows3x/gaming)
+- [Links](/windows3x/links)
+- [Dead websites](/windows3x/deadwebsites)
 
 [/page-menu]

@@ -11,8 +11,12 @@ extension("gallery", function() {
         const GALLERY_REGEX = /\[gallery[\s]+"(.+)"\]/gm;
 
         return text.replace(GALLERY_REGEX, function(_, injectPath) {
+          debugger;
           const filePath = converter.getOption("filePath");
-          const finalPath = path.join(filePath, "../..", injectPath);
+          // Hacky much?
+          const finalPath = path
+            .join(filePath, "../..", injectPath)
+            .replace("contents/contents", "contents");
           const file = fs.readFileSync(finalPath).toString("utf-8");
           const gallery: Gallery = JSON.parse(file);
 
@@ -38,7 +42,10 @@ extension("legacy-gallery", function() {
 
         return text.replace(GALLERY_REGEX, function(_, injectPath) {
           const filePath = converter.getOption("filePath");
-          const finalPath = path.join(filePath, "../..", injectPath);
+          // Hacky much?
+          const finalPath = path
+            .join(filePath, "../..", injectPath)
+            .replace("contents/contents", "contents");
           const file = fs.readFileSync(finalPath).toString("utf-8");
           const gallery: Gallery = JSON.parse(file);
           return [

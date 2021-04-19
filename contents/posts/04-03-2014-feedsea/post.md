@@ -19,15 +19,7 @@ Given the size of the user base of the platform at the time, the app was fairly 
 
 This was the first iteration of the app, which was originally for Windows Phone 7:
 
-[gallery]
-
-- ![Screenshot](/posts/04-03-2014-feedsea/SS1.png)
-- ![Screenshot](/posts/04-03-2014-feedsea/SS2.png)
-- ![Screenshot](/posts/04-03-2014-feedsea/SS3.png)
-- ![Screenshot](/posts/04-03-2014-feedsea/SS4.png)
-- ![Screenshot](/posts/04-03-2014-feedsea/SS5.png)
-
-[/gallery]
+[gallery "/contents/posts/04-03-2014-feedsea/gallery.json"]
 
 After the Windows Phone 8 release, the app had a redesign ditching the carousel navigation and moving to a hamburger menu design.
 
