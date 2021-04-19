@@ -59,6 +59,9 @@ function ensureSecure(req: Request, res: Response, next: express.NextFunction) {
     return next();
   }
 
+  console.log(req.originalUrl);
+  console.log(req.url);
+
   console.log("https://" + req.hostname + req.url);
   // handle port numbers if you need non defaults
   // res.redirect('https://' + req.host + req.url); // express 3.x
