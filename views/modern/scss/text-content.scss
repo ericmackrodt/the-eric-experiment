@@ -9,7 +9,7 @@
   }
 
   .content {
-    ul {
+    > ul {
       list-style: disc;
       margin-left: 1rem;
       font-weight: $font-weight-regular;
