@@ -51,24 +51,24 @@ function shouldCompress(req: Request, res: Response) {
 
 app.use(compression({ filter: shouldCompress }));
 
-function ensureSecure(req: Request, res: Response, next: express.NextFunction) {
-  console.log("ensure secure");
-  if (req.secure || isLegacy(req) || req.hostname === "localhost") {
-    console.log("yeah na");
-    // OK, continue
-    return next();
-  }
+// function ensureSecure(req: Request, res: Response, next: express.NextFunction) {
+//   console.log("ensure secure");
+//   if (req.secure || isLegacy(req) || req.hostname === "localhost") {
+//     console.log("yeah na");
+//     // OK, continue
+//     return next();
+//   }
 
-  console.log(req.originalUrl);
-  console.log(req.url);
+//   console.log(req.originalUrl);
+//   console.log(req.url);
 
-  console.log("https://" + req.hostname + req.url);
-  // handle port numbers if you need non defaults
-  // res.redirect('https://' + req.host + req.url); // express 3.x
-  res.redirect("https://" + req.hostname + req.url); // express 4.x
-}
+//   console.log("https://" + req.hostname + req.url);
+//   // handle port numbers if you need non defaults
+//   // res.redirect('https://' + req.host + req.url); // express 3.x
+//   res.redirect("https://" + req.hostname + req.url); // express 4.x
+// }
 
-app.all("*", ensureSecure); // at top of routing calls
+// app.all("*", ensureSecure); // at top of routing calls
 
 app.set("view engine", "vash");
 
