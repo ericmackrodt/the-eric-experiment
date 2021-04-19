@@ -17,6 +17,7 @@ import { post } from "./pages/post";
 import { tag } from "./pages/tag";
 import { Categories, MainMenuItem, PostMetadata, Tags } from "./types";
 import { isLegacy } from "./view-path";
+import got from "got";
 
 const tags: Tags = require("../contents/tags.json");
 const categories: Categories = require("../contents/categories.json");
@@ -154,6 +155,12 @@ app.get("/externalImage/:width/:height", async (req, res) => {
   const result = await processImage(req, response.data);
   res.type("jpg");
   res.send(result);
+});
+
+app.get("/download/:id", async (req, res) => {
+  const downloadId = req.params.id;
+  const downloadUrl = `https://drive.google.com/u/0/uc?id=${downloadId}&export=download&confirm=hHM7`;
+  got.stream(downloadUrl).pipe(res);
 });
 
 app.get("/", home({ tags, categories, posts, mainMenu }));

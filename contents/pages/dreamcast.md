@@ -56,7 +56,7 @@ Here are the options you have to do that plus the download link for them:
 [file-download]
   - name: "Dreamshell RC4 4.0"
   - file: "DreamShell_4.0.0_RC4_and_Boot_Loader.7z"
-  - url: "https://drive.google.com/file/d/1OEjcLbW9oATsBtUOr2xryNCApwm_u2D2/view?usp=sharing"
+  - url: "/download/1OEjcLbW9oATsBtUOr2xryNCApwm_u2D2"
   - description:
   This is the option I used, you basically have to burn the boot disk to a blank CD using something like [ImgBurn](#imgburn) and copy the contents of dreamshell to the SD-CARD.
 
@@ -66,7 +66,7 @@ Here are the options you have to do that plus the download link for them:
 [file-download]
   - name: "Dreamcast SD Rip v1.1 by jj1dom"
   - file: "Dcsdrip11.zip"
-  - url: "https://drive.google.com/file/d/1ilyUATC5o5pfpfxIlYHleKSp0fvfc-Vm/view?usp=sharing"
+  - url: "/download/1ilyUATC5o5pfpfxIlYHleKSp0fvfc-Vm"
   - description:
   This is another option for ripping games, it has better feedback of the ripping process compared to Dreamshell, but you need to dump the files on your computer everytime you finish ripping a game as this piece of sofware dumps all the files to the root folder of the sd-card.
 
@@ -76,7 +76,7 @@ Here are the options you have to do that plus the download link for them:
 [file-download]
   - name: "SD Card Formatter"
   - file: "SD Card Formatter 5.0.1 Setup.zip"
-  - url: "https://drive.google.com/file/d/1u28U5sQW1LVusSKnfXWkNOd8c2A7yDo1/view?usp=sharing"
+  - url: "/download/1u28U5sQW1LVusSKnfXWkNOd8c2A7yDo1"
   - description:
   This is the sd card formatter that is availble in the official [sdcard.org](https://www.sdcard.org/) website. I could only boot Dreamshell after formatting the sd-card with this tool. You can also download it from [here](https://www.sdcard.org/downloads/formatter/).
 [/file-download]
@@ -84,7 +84,7 @@ Here are the options you have to do that plus the download link for them:
 [file-download]
   - name: "ImgBurn"
   - file: "SetupImgBurn_2.5.8.0.exe"
-  - url: "https://drive.google.com/file/d/12XyPjxcWehxpeIsCfGofjWmReu_du-ps/view?usp=sharing"
+  - url: "/download/12XyPjxcWehxpeIsCfGofjWmReu_du-ps"
   - description:
   This is ImgBurn, the software I used to burn the images on the CDs. You can also download it from its official website [here](https://www.imgburn.com/).
 [/file-download]
@@ -96,7 +96,7 @@ You can prepare the GD-EMU sd card by using the SD CARD MAKER for GDEMU availabl
 [file-download]
   - name: "SD CARD MAKER for GDEMU V1.10"
   - file: "GDEMU_SD.rar"
-  - url: "https://drive.google.com/file/d/14ALZgKgaQwdkYdnycFD28_kZ_sk2uEKr/view?usp=sharing"
+  - url: "/download/14ALZgKgaQwdkYdnycFD28_kZ_sk2uEKr"
   description:
   This is the software that you can use to prepare the sd card for the GD-EMU with the menu as well as vga and region patches.
 [/file-download]
@@ -104,7 +104,7 @@ You can prepare the GD-EMU sd card by using the SD CARD MAKER for GDEMU availabl
 [file-download]
   - name: "Ugly GDEmu Games Manager"
   - file: "UGGM_0_7_1.7z"
-  - url: "https://drive.google.com/file/d/1OmZO_C5WeIEqfNBFP2hXPCXWO8gPE_N5/view?usp=sharing"
+  - url: "/download/1OmZO_C5WeIEqfNBFP2hXPCXWO8gPE_N5"
   - description:
   This is another option for setting up your GDEMU sd-card, I haven't tested this one but it seems that it is also able to shrink the size of your gdi images by removing the dummy files from them. You can check out the project page [here](https://github.com/Louhike/Ugly-GDEmu-Games-Manager).
 [/file-download]
