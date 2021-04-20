@@ -62,7 +62,11 @@ const getModernLayout = (layout: Layout, converter: Converter) => {
           ""
         ),
       layout["content"] &&
-        ['<div class="content">', layout["content"], "</div>"].join(""),
+        [
+          '<div class="content">',
+          layout["content"],
+          '<div id="disqus_thread"></div></div>',
+        ].join(""),
       layout["right-content"] &&
         ['<div class="side-content">', layout["right-content"], "</div>"].join(
           ""
