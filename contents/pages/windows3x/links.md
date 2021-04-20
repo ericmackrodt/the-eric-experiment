@@ -4,7 +4,7 @@ $$ left-content $$
 
 $$ content $$
 
-# Windows 3.x Liks #
+# Windows 3.x Links #
 
 Here's a list of websites around DOS and Windows 3.x that still exist... for now.
 
@@ -15,9 +15,9 @@ Here's a list of websites around DOS and Windows 3.x that still exist... for now
 - [CalPaint](http://www.calpaint.de/) - Like the Microsoft Plus! package for Windows 95, CalPaint adds themes to Calmira, you can use some of the pre-defined ones, or create your own.
 - [OldOs](http://wiki.oldos.org/index.html) - Another great website with resources around Windows 3.x and other retro computing stuff.
 
-### Not so Windows 3.x
+### Not so Windows 3.x ###
 
-I'll add a list of websites that are interesting here even though they are not necessarily related to Windows 3.x
+A list of websites that are interesting here even though they are not necessarily related to Windows 3.x
 
 - [GUIdebook](https://guidebookgallery.org/index) - This website is focused on showcasing Graphical User Interfaces, it's an interesting resource.
 - [SillyDog701 Netscape Browser Archive](http://sillydog.org/narchive/) - This is the Netscape Browser Archive by SillyDog701, the pages are still up but a lot of the links are dead.
