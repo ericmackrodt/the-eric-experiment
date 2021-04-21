@@ -83,8 +83,8 @@ Here are the options you have to do that plus the download link for them:
 
 [file-download]
   - name: "ImgBurn"
-  - file: "SetupImgBurn_2.5.8.0.exe"
-  - url: "/download/12XyPjxcWehxpeIsCfGofjWmReu_du-ps"
+  - file: "SetupImgBurn_2.5.8.0.zip"
+  - url: "/download/1g7K7I3GZHsT_Nr2FkCQS_0mANjDj4cdZ"
   - description:
   This is ImgBurn, the software I used to burn the images on the CDs. You can also download it from its official website [here](https://www.imgburn.com/).
 [/file-download]
@@ -97,7 +97,7 @@ You can prepare the GD-EMU sd card by using the SD CARD MAKER for GDEMU availabl
   - name: "SD CARD MAKER for GDEMU V1.10"
   - file: "GDEMU_SD.rar"
   - url: "/download/14ALZgKgaQwdkYdnycFD28_kZ_sk2uEKr"
-  description:
+  - description:
   This is the software that you can use to prepare the sd card for the GD-EMU with the menu as well as vga and region patches.
 [/file-download]
 
