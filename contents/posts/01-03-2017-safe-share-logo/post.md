@@ -13,7 +13,7 @@ I'm not going to go into detail of what the product did because, honestly, it do
 
 At the time, the product itself didn't have its own logo, it basically shared its logo with the company.
 
-![Covata Logo](/post/asset/500/124/01-03-2017-safe-share-logo/covata-logo.jpg)
+![Covata Logo](/post/asset/500/500/01-03-2017-safe-share-logo/covata-logo.jpg)
 
 But since we were coming up with new products and such, we decided to come up with a logo for the product to distinguish it from the other ones.
 
@@ -27,6 +27,6 @@ After doing that, the marketing person at the company put the designs for vote w
 
 After a few tweaks this was the final logo, it's nothing incredible, but hey, it was better than the professional design company's designs:
 
-![New safe share logo](/post/asset/650/185/01-03-2017-safe-share-logo/img.jpg)
+![New safe share logo](/post/asset/650/500/01-03-2017-safe-share-logo/img.jpg)
 
 And as a reward for the good work I got a super duper ultra cool.... \$50 gift card. yay...

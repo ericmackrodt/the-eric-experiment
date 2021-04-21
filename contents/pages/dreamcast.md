@@ -15,7 +15,7 @@ $$ content $$
 
 Welcome to the Sega Dreamcast resource page
 <center>
-  <img src="/img/650/136/pages/dreamcast/logo.jpg" alt="Logos">
+  <img src="/img/650/500/pages/dreamcast/logo.jpg" alt="Logos">
 </center>
 The Sega Dreamcast is one of my favorite consoles of all time, and a console I have a bit of a sad history with.
 
@@ -112,7 +112,49 @@ You can prepare the GD-EMU sd card by using the SD CARD MAKER for GDEMU availabl
 ## Favorite Games
 
 These are my favorite games on the dreamcast.
+I know this is not a super comprehensive list and some of those games are in other platforms but given my experience with the Dreamcast when I was younger, my list of games is rather limited but you will probably agree that at least the majority of them are great.
 
-<center>
-  <img src="/assets/construction.gif" alt="under construction" width="400" />
-</center>
+### Resident Evil Code Veronica ###
+
+This game hasn't been exclusive to the Dreamcast in a long time, but it was initially and it's a great entry in the series.
+Even though I have played half of it until my old dreamcast died, as a fan of the Resident Evil franchise, I think this is a solid entry in the series and I loved the atmosphere. I do plan on finishing this game eventually, and it will be on the Dreamcast.
+
+[gallery "/contents/pages/dreamcast/residentevilcv.json"]
+
+### Virtua Tennis ###
+
+I'm not a sports fan, I don't usually play sports games aside from the the sporadic Fifa, but man, Virtua Tennis is fun! My cousin introduced it to me when I got my Dreamcast and I used to play it all the time.
+
+[gallery "/contents/pages/dreamcast/virtuatennis.json"]
+
+### NBA 2k ###
+
+On that sports games note, NBA 2k is another exception to that rule, it's also a fun game that I played with my brother every now and then. These days I would just pop it in for the nostalgia, it's very unlikely I'd pick up a basketball game to play.
+
+[gallery "/contents/pages/dreamcast/nba2k.json"]
+
+### Sonic Adventure ###
+
+Alright, this is an obvious one, but this is the game that burned the Dreamcast into my mind. When I saw the first level with the orca whale jumping behind Sonic at a store front around 1999/2000, I was mind-blown.
+
+Sure, the graphics and the controllers may have aged like milk, but the impression is still there and I still love revisiting this game every now and again.
+
+[gallery "/contents/pages/dreamcast/sonicadventure.json"]
+
+### Crazy Taxi ###
+
+Alright, another obvious one. And this one I experienced years after my original Dreamcast died but I could instantly see why people love this game so much. It's fun, it's chaotic, it's awesome.
+
+[gallery "/contents/pages/dreamcast/crazytaxi.json"]
+
+### Ready 2 Rumble ###
+
+This game has a silliness to it that I always liked. It's not a particularly great game, but it is fun and it is a game that I have some good memories of playing when I was younger.
+
+[gallery "/contents/pages/dreamcast/ready2rumble.json"]
+
+### Soulcalibur ###
+
+I feel that a lot of fighting games require you to be very skilled to have fun with them. That's not the case with Soulcalibur. I've never been particularly good at fighting games but with games like Bloody Roar, Tekken and SoulCalibur I have always felt that I could play and possibly win without having to use those repeated moves that lock the opponent in place and they can't do anything about it.
+
+[gallery "/contents/pages/dreamcast/soulcalibur.json"]

@@ -55,7 +55,7 @@ export default {
         return;
       }
       const img = this.images[index];
-      return `/img/200/150${img}`;
+      return `/img/200/200${img}`;
     },
   },
 };

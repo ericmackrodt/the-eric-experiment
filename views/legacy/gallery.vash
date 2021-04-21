@@ -15,7 +15,7 @@
     @(model.hasPreviousImage ? html.raw('<a href="' + model.previousImage + '">[previous image]</a>') : '')
     @(model.hasNextImage ? html.raw('<a href="' + model.nextImage + '">[next image]</a>') : '')<br>
     <img src="/assets/nothing.gif" width="1" height="5"><br>
-    <img src="/full-assets@model.currentPhoto"><br>
+    <img src="/full-img@model.currentPhoto"><br>
     <img src="/assets/nothing.gif" width="1" height="5"><br>
     @(model.hasPreviousImage ? html.raw('<a href="' + model.previousImage + '">[previous image]</a>') : '')
     @(model.hasNextImage ? html.raw('<a href="' + model.nextImage + '">[next image]</a>') : '')

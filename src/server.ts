@@ -1,4 +1,3 @@
-import axios from "axios";
 import { urlencoded } from "body-parser";
 import * as compression from "compression";
 import * as cookieParser from "cookie-parser";
@@ -6,9 +5,8 @@ import * as express from "express";
 import { Request, Response } from "express";
 import * as session from "express-session";
 import * as useragent from "express-useragent";
-import * as fs from "fs";
-import * as path from "path";
-import * as sharp from "sharp";
+import got from "got";
+import { images } from "./images";
 import { category } from "./pages/category";
 import { gallery } from "./pages/gallery";
 import { home } from "./pages/home";
@@ -17,7 +15,6 @@ import { post } from "./pages/post";
 import { tag } from "./pages/tag";
 import { Categories, MainMenuItem, PostMetadata, Tags } from "./types";
 import { isLegacy } from "./view-path";
-import got from "got";
 
 const tags: Tags = require("../contents/tags.json");
 const categories: Categories = require("../contents/categories.json");
@@ -74,107 +71,7 @@ app.set("view engine", "vash");
 
 app.use("/assets", express.static("assets"));
 
-async function processImage(req: Request, data: Buffer) {
-  const fullSize = req.query.fullSize === "true";
-  const smaller = isLegacy(req);
-  const fit = req.query.fit as
-    | "fill"
-    | "contain"
-    | "cover"
-    | "inside"
-    | "outside";
-
-  let width: number = 0;
-  let originalWidth = 0;
-  let height: number = 0;
-
-  const image = sharp(data);
-
-  // God, the code here is horrible
-  // But it works...
-  if (!req.params.width && !req.params.height) {
-    const metadata = await image.metadata();
-    debugger;
-    width = metadata.width || 0;
-    originalWidth = width;
-    height = metadata.height || 0;
-
-    if (smaller && !fullSize) {
-      if (width > 700) {
-        width = 700;
-
-        height = Math.floor((height * width) / originalWidth);
-      }
-    }
-  } else {
-    originalWidth = parseInt(req.params.width);
-    width = originalWidth;
-    height = parseInt(req.params.height);
-    if (smaller && !fullSize) {
-      if (width > 500) {
-        width = 500;
-
-        height = Math.floor((height * width) / originalWidth);
-      }
-    }
-  }
-
-  return sharp(data)
-    .resize(width, height, {
-      fit,
-    })
-    .jpeg({
-      quality: 50,
-      chromaSubsampling: "4:4:4",
-    })
-    .toBuffer();
-}
-
-app.get("/post/asset/:width/:height/:id/*", async (req, res, next) => {
-  try {
-    const param = req.params[0];
-    const buffer = fs.readFileSync(
-      path.join(__dirname, "../contents/posts", req.params.id, param)
-    );
-    const result = await processImage(req, buffer);
-    res.type("jpg");
-    res.send(result);
-  } catch (_) {
-    next();
-  }
-});
-
-app.get("/img/:width/:height/*", async (req, res, next) => {
-  try {
-    const param = req.params[0];
-    const buffer = fs.readFileSync(path.join(__dirname, "../assets", param));
-    const result = await processImage(req, buffer);
-    res.type("jpg");
-    res.send(result);
-  } catch (_) {
-    next();
-  }
-});
-
-app.get("/full-assets/*", async (req, res, next) => {
-  try {
-    const param = req.params[0];
-    const buffer = fs.readFileSync(path.join(__dirname, "../assets", param));
-    const result = await processImage(req, buffer);
-    res.type("jpg");
-    res.send(result);
-  } catch (_) {
-    next();
-  }
-});
-
-app.get("/externalImage/:width/:height", async (req, res) => {
-  const url = req.query.url as string;
-  const response = await axios.get(url, { responseType: "arraybuffer" });
-  const result = await processImage(req, response.data);
-  res.type("jpg");
-  res.send(result);
-});
+images(app);
 
 app.get("/download/:id", async (req, res) => {
   const downloadId = req.params.id;

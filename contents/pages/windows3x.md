@@ -8,7 +8,7 @@ $$ content $$
 Welcome to the Windows 3.x resource page.
 
 <center>
-  <img src="/img/650/257/pages/windows311/title-screens.png" alt="Logos">
+  <img src="/img/650/500/pages/windows311/title-screens.png" alt="Logos">
 </center>
 
 These are my curated resources that I think matters about my favorite "Operating System" of all time, Windows 3.x.
