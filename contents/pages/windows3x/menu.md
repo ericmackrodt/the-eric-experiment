@@ -3,7 +3,6 @@
 - [Web Browsing](/windows3x/webbrowsing)
 - [Drivers](/windows3x/drivers)
 - [Essential Software](/windows3x/essentialsoftware)
-- [Music](/windows3x/music)
 - [Gaming](/windows3x/gaming)
 - [Links](/windows3x/links)
 - [Dead websites](/windows3x/deadwebsites)
