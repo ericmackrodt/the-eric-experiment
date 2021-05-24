@@ -1,6 +1,26 @@
 [
-  { "path": "/", "label": "Home" },
-  { "path": "/windows3x", "label": "Windows 3.x" },
-  { "path": "/dreamcast", "label": "Dreamcast" },
-  { "path": "/about-me", "label": "About me" }
+  {
+    "path": "/",
+    "label": "Home"
+  },
+  {
+    "path": "/windows3x",
+    "label": "Windows 3.x"
+  },
+  {
+    "path": "/dreamcast",
+    "label": "Dreamcast"
+  },
+  {
+    "path": "/software",
+    "label": "Software"
+  },
+  {
+    "path": "/drivers",
+    "label": "Drivers"
+  },
+  {
+    "path": "/about-me",
+    "label": "About me"
+  }
 ]
