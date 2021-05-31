@@ -1,9 +1,11 @@
+---
 title: MacBook Pro 2015 | Totally an Apple Enthusiast
 date: 29-12-2016
 tags: comedy, computing, silly, macbook pro, apple
 category: Computing, Videos
 image: img.jpg
 description: My first actual attempt at starting a Youtube channel.
+---
 
 Being an avid youtube content consumer for years, I kinda started getting interested in making videos myself. This was my first actual attempt at it, aside from my Lindsey Stirling cover.
 

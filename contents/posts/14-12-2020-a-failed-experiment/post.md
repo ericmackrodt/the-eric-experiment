@@ -1,9 +1,11 @@
+---
 title: A failed experiment
 date: 14-12-2020
 tags: retro computing, raid 0, sd cards, video, failed experiment
 category: Retro Computing, Videos
 image: img.jpg
 description: I tried to run two SD cards in Raid 0 with a PCI RAID controller but it didn't work.
+---
 
 When I was making the Pentium MMX video, because SD cards aren't the fastest thing in the world, I thought it could be a good idea to run two SD cards on Raid 0. That would be cool because it could potentially allow for speeds similar to ATA66 on SD cards.
 

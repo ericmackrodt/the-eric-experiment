@@ -1,9 +1,11 @@
+---
 title: The Amazing Whatever (Original Song)
 date: 07-04-2015
 tags: music, composing, production, original song
 category: Music
 image: img.png
 description: My first original song I ever finshed.
+---
 
 This is the first song I ever finished, from composing, to recording, mixing, mastering and releasing.
 

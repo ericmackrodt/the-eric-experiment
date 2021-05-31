@@ -1,9 +1,11 @@
+---
 title: My first 3D printed design
 date: 02-05-2021
 tags: 3d printing, hardware, computing, cad design
 category: Design, 3D Printing
 image: img1.png
 description: I recently got a 3d printer and this is my first design.
+---
 
 I recently bought a 3d printer, the Creality Ender 3 V2, my first few prints out of it were the demos that came in the sd card and some stuff I got on [Thingiverse](https://www.thingiverse.com).
 

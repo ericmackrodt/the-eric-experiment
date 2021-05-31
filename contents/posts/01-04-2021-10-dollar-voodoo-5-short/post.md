@@ -1,9 +1,11 @@
+---
 title: 3dfx Voodoo 5 for $10 Short
 date: 01-04-2021
 tags: retro computing, 3dfx, voodoo, voodoo 5 5500, youtube shorts, graphics card
 category: Retro Computing, Videos
 image: img.jpg
 description: This was my first and probably only attempt of making a Youtube Short.
+---
 
 Honestly, as a content consumer on Youtube, the shorts feature is something I don't use.
 
@@ -22,4 +24,3 @@ I will build an actual computer with the video card though, and I'll probably br
 [Click here](https://www.youtube.com/watch?v=hxe_yOpfjRU) to go to the Youtube Short.
 
 ![3dfx Voodoo 5 for $10 #Short](https://www.youtube.com/watch?v=hxe_yOpfjRU)
-

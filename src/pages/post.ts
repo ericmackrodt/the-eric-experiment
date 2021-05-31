@@ -3,8 +3,8 @@ import { viewPath } from "../view-path";
 import { BlogData, PostMetadata } from "../types";
 import * as fs from "fs";
 import * as path from "path";
-import { parse } from "yaml";
 import { convertToHtml } from "../markdown";
+import * as fm from "front-matter";
 
 export function post(blogData: BlogData) {
   return async (req: Request, res: Response, next: NextFunction) => {
@@ -19,19 +19,21 @@ export function post(blogData: BlogData) {
         .readFileSync(path.join(dirname, "post.md"))
         .toString("utf-8");
 
-      const lines = post.split("\n");
-      const meta = parse(lines.slice(0, 6).join("\n"));
+      // The types for this library are wrong
+      /* @ts-ignore */
+      const { attributes, body } = fm<TMetadata>(post);
+
       const metadata: PostMetadata = {
-        categories: meta.category.split(",").map((o: string) => o.trim()),
-        tags: meta.tags.split(",").map((o: string) => o.trim()),
-        title: meta.title,
-        date: meta.date,
-        image: meta.image,
+        categories: attributes.category.split(",").map((o: string) => o.trim()),
+        tags: attributes.tags.split(",").map((o: string) => o.trim()),
+        title: attributes.title,
+        date: attributes.date,
+        image: attributes.image,
         filename: req.params.id,
-        description: meta.description,
+        description: attributes.description,
       };
 
-      const content = convertToHtml(req, dirname, lines.slice(6).join("\n"));
+      const content = convertToHtml(req, dirname, body);
 
       res.render(viewPath(req, "post"), {
         ...blogData,

@@ -25,6 +25,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "express-useragent": "^1.0.15",
+    "front-matter": "^4.0.2",
     "got": "^11.8.2",
     "luxon": "^1.25.0",
     "node-sass": "^4.14.1",
@@ -39,8 +40,7 @@
     "vue-click-outside": "^1.1.0",
     "vue-hot-reload-api": "^2.3.4",
     "vue-light-gallery": "^1.0.1",
-    "vue-property-decorator": "^9.0.0",
-    "yaml": "^1.10.0"
+    "vue-property-decorator": "^9.0.0"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
@@ -55,7 +55,6 @@
     "@types/query-string": "^6.3.0",
     "@types/sharp": "^0.25.0",
     "@types/showdown": "^1.9.3",
-    "@types/yaml": "^1.9.7",
     "@vue/component-compiler-utils": "^3.2.0",
     "ts-node-dev": "^1.0.0-pre.48",
     "typescript": "^3.9.5",

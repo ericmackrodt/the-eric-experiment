@@ -1,9 +1,11 @@
+---
 title: That time I designed a logo for my company
 date: 01-03-2017
 tags: design, logo
 category: Design
 image: img.jpg
 description: Okay, this is a cool story, I don't remember the exact date but ...
+---
 
 Okay, this is a cool story, I don't remember the exact date but it was some time around February or March of 2017.
 

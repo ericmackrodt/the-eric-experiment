@@ -1,9 +1,11 @@
+---
 title: Inspections Tribe Ship-it logo
 date: 03-12-2018
 tags: design, t-shirt
 category: Design
 image: img.jpg
 description: That time I designed a logo for a ship-it event for my company
+---
 
 Okay, this might be a bit overrated because I actually followed a Photoshop tutorial to design this thing.
 But hey, it ended up looking pretty good.

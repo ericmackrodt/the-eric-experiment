@@ -1,9 +1,11 @@
+---
 title: PS5 on a 1965 CRT TV
 date: 01-02-2021
 tags: retro gaming, ps5, playstation 5, crt tv, playstation 5 on crt tv
 category: Retro Gaming, Consoles, Videos
 image: img.jpg
 description: In this part of The Eric Experiment, we're connecting and playing ALL Sony Playstation consoles, including the PS5, to a 5" Black and White CRT TV by none other than Sony!
+---
 
 What a dry month was January. I was working on multiple videos and between parts failing, things being incompatible, parts being dead on arrival and so on I couldn't finish any of the 3 videos I was attempting to get done by the 12th of January.
 

@@ -1,9 +1,11 @@
+---
 title: Feedsea - A Feedly client for Windows Phone
 date: 04-03-2014
 tags: mobile, windows phone, microsoft, feedly, app
 category: Mobile
 image: img.jpg
 description: My discontinued Feedly client for Windows Phone.
+---
 
 Do you remember Windows Phone? I sure do! I was a Windows Phone user until it became completely irrelevant and I still own my Lumia 950XL and my Lumia 820.
 

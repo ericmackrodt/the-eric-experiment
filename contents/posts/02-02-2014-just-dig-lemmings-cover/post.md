@@ -1,9 +1,11 @@
+---
 title: Just Dig (Lemmings Cover)
 date: 02-02-2014
 tags: music, cover, retro gaming
 category: Music
 image: img.jpg
 description: My cover of the first level song of Lemmings for DOS.
+---
 
 This is the second song I ever recorded, after the Minimal Beat cover. Lemmings is one of my favorite games of all time, so I covered the first level song "Just Dig" of the DOS version.
 

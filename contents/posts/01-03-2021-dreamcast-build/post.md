@@ -1,9 +1,11 @@
+---
 title: A Custom Dreamcast Build
 date: 01-03-2021
 tags: retro gaming, dreamcast, gdemu, redream psu, sega
 category: Retro Gaming, Consoles, Videos
 image: img.jpg
 description: In this part of The Eric Experiment, we're gonna build an unique and customized Sega Dreamcast.
+---
 
 The Sega Dreamcast is one of my favorite consoles of all time, and a console I have a bit of a sad history with.
 

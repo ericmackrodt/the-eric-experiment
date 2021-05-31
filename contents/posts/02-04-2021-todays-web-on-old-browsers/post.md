@@ -1,9 +1,11 @@
+---
 title: Today's Web on Old Browsers
 date: 02-04-2021
 tags: retro computing, internet, browservice, wrp, web rendering proxy, retro software
 category: Retro Computing, Computing, Videos
 image: img.jpg
 description: A video about the magic of being able to use moder websites on old browsers such as NCSA Mosaic, Netscape 4, Internet Explorer 4 and so on.
+---
 
 One thing that brings me a huge deal of nostalgia is the Web 1.0. Don't get me wrong, I wouldn't trade our modern internet and computers for the experience we had in the 90's, but I definitely remember the experience of connecting to the internet via dial-up, using old browsers like Netscape Navigator 4 and going on websites like Geocities very fondly.
 
@@ -17,7 +19,7 @@ Or can't we?
 
 In this video we explore 3 different solutions to proxying a headless instance of Google Chrome from a modern computer to an old computer running old browsers, effectivelly allowing us to browse the modern web on very old browsers.
 
-Those pieces of software are: 
+Those pieces of software are:
 
 - [Web Rendering Proxy](https://github.com/tenox7/wrp) - With this you can browse the modern web on very, VERY old browsers. We're talking NCSA Mosaic, Internet Explorer 2.0, Netscape 2.0 and so on. This is a very clever solution albeit with some limitations, one of them being that it's a bit slow to reload the page between clicks.
 
@@ -56,4 +58,3 @@ So I went into the Youtube Editor and tried to blur those as well, after I confi
 After contacting team youtube on Twitter, they recommended deleting the video and re-uploading it, so I did that reluctantly making sure I blurred anything that could be considered a sensitive subject in the screen captures.
 
 And here's where we are today, with a re-upload that definitely hurts my already struggling channel. That's awesome!
-

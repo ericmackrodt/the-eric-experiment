@@ -1,9 +1,11 @@
+---
 title: Virtual Assistant Infinite Loop
 date: 23-01-2018
 tags: computing, silly, alexa, cortana, siri, google assitant
 category: Videos
 image: img.jpg
 description: That time I made an infinite loop with all major virtual assistants.
+---
 
 So, Like, okay. I spent like, 2 hours to get this to work. And it did!
 

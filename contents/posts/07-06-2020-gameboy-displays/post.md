@@ -1,9 +1,11 @@
+---
 title: GameBoy displays
 date: 07-06-2020
 tags: retro gaming, gameboy, diy, ikea, kasseby, gameboy display, shadow box
 category: Retro Gaming, Portables, Videos
 image: img.jpg
 description: In this part of The Eric Experiment, we will build some GameBoy displays out of IKEA Kassebys.
+---
 
 In this part of The Eric Experiment, we will build some GameBoy displays out of IKEA Kassebys.
 

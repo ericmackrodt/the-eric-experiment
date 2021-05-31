@@ -1,9 +1,8 @@
 import * as fs from "fs";
 import * as path from "path";
-import { createInterface } from "readline";
-import { parse } from "yaml";
 import { PostMetadata } from "./types";
 import { DateTime } from "luxon";
+import * as fm from "front-matter";
 
 async function run() {
   var normalizedPath = path.join(__dirname, "../contents/posts");
@@ -21,29 +20,15 @@ async function run() {
           return;
         }
 
-        const lineReader = createInterface({
-          input: fs.createReadStream(postPath),
-        });
+        const content = fs.readFileSync(postPath, { encoding: "utf-8" });
 
-        let lineCounter = 0;
-        const lines: string[] = [];
-
-        lineReader.on("line", (line) => {
-          lineCounter++;
-          lines.push(line);
-          if (lineCounter === 6) {
-            lineReader.close();
-          }
-        });
-        lineReader.on("close", () => {
-          const result = parse(lines.join("\n\r"));
-          resolve({
-            ...result,
-            filename: post,
-          });
-        });
-        lineReader.on("error", (err) => {
-          reject(err);
+        // The types for this library are wrong
+        /* @ts-ignore */
+        const metadata = fm<TMetadata>(content);
+        resolve({
+          ...metadata.attributes,
+          content: metadata.body,
+          filename: post,
         });
       })
   );
