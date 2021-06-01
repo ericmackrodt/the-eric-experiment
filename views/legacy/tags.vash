@@ -5,29 +5,22 @@
   }));
 }
 
-<table cellspacing="0" border="0" cellpadding="2">
-<td colspan="3" width="550" valign="top">
-<img height="10" width="1" src="/assets/nothing.gif"></td>
-<tr>
-<td align="center" bgcolor="#DDDDDD">
-<font face="arial" size="3">
-  <b>Tags</b>
-</font>
-</td>
-</tr>
-<tr>
-<td>
-<font face="arial" size="-1">
-@tags.forEach(function (item, index) {
-  @{
-    var isLast = index === (tags.length - 1);
-  }
-  <a href="/tag?id=@item.label">
-    @item.label (@item.count)
-  </a>
-  @(isLast ? '' : ' | ')
-})
-</font>
-</td>
-</tr>
+<table bordercolordark="#000000" width="600" border="0">
+  <tr>
+    <td align="center">
+      <font size="3">
+        <b>Tags</b>
+      </font>
+      <br>
+      @tags.forEach(function (item, index) {
+        @{
+          var isLast = index === (tags.length - 1);
+        }
+        <a href="/tag?id=@item.label">
+          @item.label (@item.count)
+        </a>
+        @(isLast ? '' : ' | ')
+      })
+    </td>
+  </tr>
 </table>

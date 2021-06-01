@@ -1,25 +1,31 @@
 [
   {
+    "icon": "/assets/home.png",
     "path": "/",
     "label": "Home"
   },
   {
+    "icon": "/assets/windows.png",
     "path": "/windows3x",
     "label": "Windows 3.x"
   },
   {
+    "icon": "/assets/dreamcast.png",
     "path": "/dreamcast",
     "label": "Dreamcast"
   },
   {
+    "icon": "/assets/programs.png",
     "path": "/software",
     "label": "Software"
   },
   {
+    "icon": "/assets/devices.png",
     "path": "/drivers",
     "label": "Drivers"
   },
   {
+    "icon": "/assets/msn.png",
     "path": "/about-me",
     "label": "About me"
   }

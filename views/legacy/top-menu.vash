@@ -1,8 +1,13 @@
-<table cellspacing="2" cellpadding="2" border="0">
+<table border="0" cellspacing="5">
   <tr>
-   @model.mainMenu.forEach(function (item) {
-      <td><a href="@item.path" style="text-decoration: none"><font size="-1" face="arial" color="#FFFFFF">@item.label</font></a></td>
-      <td><font size="-1" face="arial" color="#FFFFFF">|</font></td>
-   })
+    @model.mainMenu.forEach(function (item) {
+      <td align="center">
+        <a href="@item.path">
+          <img src="@item.icon">
+          <br>
+          <font size="-1">@item.label</font>
+        </a>
+      </td>
+    })                
   </tr>
 </table>

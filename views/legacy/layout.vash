@@ -1,41 +1,56 @@
-@{
-  var columns = model.showSideContent ? 3 : 1;
-}
 <html>
 <head>
   <meta charset="UTF-8">
   <title>The Eric Experiment</title>
   @html.block('seo')
 </head>
-<body bgcolor="#000000" text="#000000" background="/assets/starfiel.gif">
+<body bgcolor="#000000" text="#fffffff" background="/assets/starfiel.gif" vlink="#00FF00" link="#00FF00">
 <center>
-<table width="700" cellspacing="0" cellpadding="0" border="0">
-  <tr>
-    <td bgcolor="#ffffff">
-      <table width="100%" cellpadding="0" cellspacing="5" border="0">
-        <tr>
-          <td colspan="@columns"><img src="/full-img/header.jpg" alt="The Eric Experiment" border="0" /></td>
-        </tr>
-        <tr>
-          <td colspan="@columns" bgcolor="#1238B3">
-            @html.extend('legacy/top-menu', function () {})
-          </td>
-        </tr>
-        <tr>
-          <td valign="top" width="500">
-            @html.block('content')
-          </td>
-          @(model.showSideContent ? html.extend('legacy/side-content', function() {}) : '')
-        </tr>
-        <tr>
-          <td colspan="@columns" align="center">
-            @html.extend('legacy/tags', function () {})
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
+  <img src="/assets/logo.png" alt="The Eric Experiment">
+  <br>
+  <img src="/assets/anibar.gif">
+
+  @html.extend('legacy/top-menu', function () {})
+  
+  <img src="/assets/anibar.gif">
 </center>
+
+@html.block('content')
+
+<center>
+  <br>
+    <img src="/assets/nothing.gif" width="1" height="5"><br>
+    <table border="0">
+      <tr>
+        <td align="right">
+          <img src="/assets/cat.gif">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="/assets/flamingline.gif" width="600">
+        </td>
+      </tr>
+    </table>
+    <br>
+    <img
+      src="/assets/nothing.gif" width="1" height="5"><br>
+    @html.extend('legacy/tags', function () {})
+    <img src="/assets/nothing.gif" width="1" height="5"><br><img src="/assets/black_pixel.gif" width="100%" height="1"><br><img
+      src="/assets/nothing.gif" width="1" height="5"><br>
+    <img src="/assets/netscap4.gif">
+    <img src="/assets/ie.gif">
+    <img src="/assets/800x600.gif">
+    <img src="/assets/frontpg.gif">
+    <img src="/assets/mircban.gif">
+    <br>
+    Copyright © 1988-2020 The Eric Experiment
+    <br>
+
+    <img src="/assets/neon.gif">
+    <br>
+    <img src="/assets/skyline.gif">
+  </center>
 </body>
+
 </html>

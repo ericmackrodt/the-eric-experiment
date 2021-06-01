@@ -13,13 +13,13 @@ $$ left-content $$
 
 $$ content $$
 
-# Software #
+# Software
 
 This page contains software that is useful for your retro-computing needs.
 
 This page does not contain Windows 3.x specific software, if you want software for Windows 3.x specifically, please visit the [Windows 3.x resource page](/windows3x)
 
-### Multimedia ###
+### Multimedia
 
 [file-download]
 
@@ -27,7 +27,7 @@ This page does not contain Windows 3.x specific software, if you want software f
 - file: "directx8.1b.zip"
 - url: "/download/17X2KgXeiCogOxEiRFiZBblYQ7-v0ntlT"
 - description:
-  Microsoft DirectX 8.1 is necessary to run 3dmark and some games on Windows 9x/ME. 
+  Microsoft DirectX 8.1 is necessary to run 3dmark and some games on Windows 9x/ME.
 
 [/file-download]
 
@@ -38,10 +38,10 @@ This page does not contain Windows 3.x specific software, if you want software f
 [[Go back](#software)]
 
 <center>
-  <img src="/assets/anibar.gif" />
+  <img src="/assets/anibar.gif" width="450" />
 </center>
 
-### Networking ###
+### Networking
 
 [file-download]
 
@@ -60,10 +60,10 @@ This page does not contain Windows 3.x specific software, if you want software f
 [[Go back](#software)]
 
 <center>
-  <img src="/assets/anibar.gif" />
+  <img src="/assets/anibar.gif" width="450" />
 </center>
 
-### Internet ###
+### Internet
 
 [file-download]
 
@@ -102,10 +102,10 @@ This page does not contain Windows 3.x specific software, if you want software f
 [[Go back](#software)]
 
 <center>
-  <img src="/assets/anibar.gif" />
+  <img src="/assets/anibar.gif" width="450" />
 </center>
 
-### Benchmark/Demos ###
+### Benchmark/Demos
 
 [file-download]
 
@@ -194,16 +194,16 @@ This page does not contain Windows 3.x specific software, if you want software f
 [[Go back](#software)]
 
 <center>
-  <img src="/assets/anibar.gif" />
+  <img src="/assets/anibar.gif" width="450" />
 </center>
 
-### Archiving ###
+### Archiving
 
 [file-download]
 
 - name: "Daemon Tools 3.47"
 - file: "daemon347.exe"
-- url: "/download/1YedyXEdGuRyDnaD6ds_-cBAHSvSfSMlK"
+- url: "/download/1YedyXEdGuRyDnaD6ds\_-cBAHSvSfSMlK"
 - description:
   Daemon Tools 3.47 is the last version that works on Windows 9x/ME and allows you to mount virtual CD drives on those operating systems. In order to install it you might need to update your Windows Installer, which you can download in the [Updates](#updates) section.
 
@@ -226,10 +226,10 @@ This page does not contain Windows 3.x specific software, if you want software f
 [[Go back](#software)]
 
 <center>
-  <img src="/assets/anibar.gif" />
+  <img src="/assets/anibar.gif" width="450" />
 </center>
 
-### Updates ###
+### Updates
 
 [file-download]
 
@@ -248,9 +248,7 @@ This page does not contain Windows 3.x specific software, if you want software f
 [[Go back](#software)]
 
 <center>
-  <img src="/assets/anibar.gif" />
+  <img src="/assets/anibar.gif" width="450" />
 </center>
 
 [[Go back](#software)]
-
-

@@ -1,6 +1,14 @@
 @html.extend('legacy/layout', function(model){
 	@html.block('content', function(model){
+		<center>	
 		<h2>@model.title</h2>
+		@html.extend('legacy/categories', function () {})
+    <img src="nothing.gif" width="1" height="5"><br><img src="black_pixel.gif" width="100%" height="1"><br><img
+      src="nothing.gif" width="1" height="5">
 		@html.extend('legacy/post-list', function () {})
+		 <img src="nothing.gif" width="1" height="5"><br><img src="black_pixel.gif" width="100%" height="1"><br><img
+      src="nothing.gif" width="1" height="5">
+    @html.extend('legacy/categories', function () {})
+		</center>
 	})
 })

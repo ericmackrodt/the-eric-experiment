@@ -11,7 +11,7 @@ $$ left-content $$
 
 $$ content $$
 
-# Drivers #
+# Drivers
 
 This page contains drivers that I gathered over time for the pieces of hardware I own.
 
@@ -86,7 +86,7 @@ Even though some downloads might drivers for Windows 3.x if they have drivers fo
 [[Go back](#drivers)]
 
 <center>
-  <img src="/assets/anibar.gif" />
+  <img src="/assets/anibar.gif" width="480" />
 </center>
 
 ### Sound
@@ -120,7 +120,7 @@ Even though some downloads might drivers for Windows 3.x if they have drivers fo
 [[Go back](#drivers)]
 
 <center>
-  <img src="/assets/anibar.gif" />
+  <img src="/assets/anibar.gif" width="480" />
 </center>
 
 ### Networking
@@ -132,7 +132,7 @@ Even though some downloads might drivers for Windows 3.x if they have drivers fo
 - url: "/download/1nDnPGcX3Ucr8fUL6civ9lj2dDw4Q8sBI"
 - description:
   These are the drivers for the Plugable USB 2.0 Fast Ethernet and other USB Ethernet adapters using the ASIX AX88772 chipset for Windows 98SE/ME
-  
+
 [/file-download]
 
 [file-download]
@@ -142,7 +142,7 @@ Even though some downloads might drivers for Windows 3.x if they have drivers fo
 - url: "/download/1LSawOwcTupBzu75L_424BUyuVbuaxUjs"
 - description:
   These are the drivers for the Realtek RTL8169 Ethernet Card for Windows 9x/ME, this is probably one of the most versatile, reliable and compatible network chipset, I always use them in my retro-computers and I highly recommend them.
-  
+
 [/file-download]
 
 <center>
@@ -152,7 +152,7 @@ Even though some downloads might drivers for Windows 3.x if they have drivers fo
 [[Go back](#drivers)]
 
 <center>
-  <img src="/assets/anibar.gif" />
+  <img src="/assets/anibar.gif" width="480" />
 </center>
 
 ### Modem
@@ -164,7 +164,7 @@ Even though some downloads might drivers for Windows 3.x if they have drivers fo
 - url: "/download/1E3gkRCloRsfXKPEAY-W0aQQdxaKaIsvy"
 - description:
   These are drivers of the US Robotics Sportster Flash External Modem for Windows 9x.
-  
+
 [/file-download]
 
 [file-download]
@@ -174,7 +174,7 @@ Even though some downloads might drivers for Windows 3.x if they have drivers fo
 - url: "/download/1GYRTFeu4jt7TeDRAlwQayXHeWXJ_TVLN"
 - description:
   These are drivers of the US Robotics Sportster Flash External Modem for Windows 9x.
-  
+
 [/file-download]
 
 [file-download]
@@ -184,7 +184,7 @@ Even though some downloads might drivers for Windows 3.x if they have drivers fo
 - url: "/download/15WipOYqeFmTN1-Rn9t1IQqcxF2dWLzqK"
 - description:
   These are drivers of the US Robotics Sportster Flash External Modem for Windows 9x.
-  
+
 [/file-download]
 
 <center>
@@ -194,7 +194,7 @@ Even though some downloads might drivers for Windows 3.x if they have drivers fo
 [[Go back](#drivers)]
 
 <center>
-  <img src="/assets/anibar.gif" />
+  <img src="/assets/anibar.gif" width="480" />
 </center>
 
 [[Go back](#drivers)]

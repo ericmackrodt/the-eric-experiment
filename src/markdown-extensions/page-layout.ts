@@ -3,22 +3,22 @@ import { extension, Converter, ConverterOptions } from "showdown";
 type Layout = Record<string, string>;
 
 const getLegacyLayout = (layout: Layout, converter: Converter) => {
-  let contentWidth = 700;
+  let contentWidth = 600;
   if (layout["left-content"]) {
-    contentWidth = contentWidth - 150;
+    contentWidth = contentWidth - 130;
   }
 
   if (layout["right-content"]) {
-    contentWidth = contentWidth - 150;
+    contentWidth = contentWidth - 130;
   }
 
   return converter.makeHtml(
     [
-      '<table cellspacing="0" sellpadding="0" border="0">',
+      '<table cellspacing="0" cellpadding="0" border="0" width="600">',
       "<tr>",
       layout["left-content"] &&
         [
-          '<td valign="top" width="150">',
+          '<td valign="top" width="120">',
           layout["left-content"],
           "</td>",
           '<td width="10" valign="top">',
@@ -33,16 +33,13 @@ const getLegacyLayout = (layout: Layout, converter: Converter) => {
           layout["content"],
           "</font>",
           "</td>",
-          '<td width="5" valign="top">',
-          '<img src="/assets/nothing.gif" width="5" height="1">',
-          "</td>",
         ].join(""),
       layout["right-content"] &&
         [
-          '<td width="5" valign="top">',
+          '<td width="10" valign="top">',
           '<img src="/assets/nothing.gif" width="5" height="1">',
           "</td>",
-          '<td valign="top" width="150">',
+          '<td valign="top" width="120">',
           layout["right-content"],
           "</td>",
         ].join(""),

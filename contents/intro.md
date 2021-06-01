@@ -1,5 +1,3 @@
-## Welcome
-
 Hello! Welcome to The Eric Experiment, I am the Eric from the title!
 
 This is the website where you can check out the projects I have worked on, the stuff I have been trying and more.

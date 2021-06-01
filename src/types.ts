@@ -11,6 +11,7 @@ export type PostMetadata = {
 };
 
 export type MainMenuItem = {
+  icon: string;
   path: string;
   lable: string;
 };

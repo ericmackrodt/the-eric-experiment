@@ -59,7 +59,7 @@ extension("netscape-page-menu", function() {
             [
               '<table cellspacing="0" cellpadding="2" border="0" width="100%">',
               "<tr>",
-              '<td bgcolor="#DDDDDD" align="center">',
+              '<td bgcolor="#1238B3" align="center">',
               '<font face="arial" size="3">',
               "<b>Contents</b>",
               "</font>",

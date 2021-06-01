@@ -1,14 +1,32 @@
 @html.extend('legacy/layout', function(model){
 	@html.block('content', function(model){
-		<font size="-1" face="arial">
-			@html.raw(model.intro)
-		</font>
-		<font face="arial" size="4">
-			<b>Latest parts of the experiment</b>
-		</font><br>
-		<img src="/assets/nothing.gif" width="1" height="10"><br>
-		<img src="/assets/black_pixel.gif" width="100%" height="1"><br>
-		<img src="/assets/nothing.gif" width="1" height="10">
+		<center>
+		<table bordercolordark="#000000" width="600" border="0">
+      <tr>
+        <td>
+          <img src="/assets/avatar.jpg">
+        </td>
+        <td>
+          <img src="/assets/welcome.gif">
+          <font size="-1">
+						@html.raw(model.intro)
+					</font>
+        </td>
+      </tr>
+    </table>
+		<br><img src="/assets/nothing.gif" width="1" height="5"><br><img src="/assets/anibar2.gif" width="600"><br><img
+      src="/assets/nothing.gif" width="1" height="5">
+    <font size="4">
+      <b>Latest parts of the experiment</b>
+    </font><br><img src="/assets/nothing.gif" width="1" height="5"><br><img src="/assets/black_pixel.gif" width="100%"
+      height="1"><br><img src="/assets/nothing.gif" width="1" height="5">
+		@html.extend('legacy/categories', function () {})
+    <img src="nothing.gif" width="1" height="5"><br><img src="black_pixel.gif" width="100%" height="1"><br><img
+      src="nothing.gif" width="1" height="5">
 		@html.extend('legacy/post-list', function () {})
+		 <img src="nothing.gif" width="1" height="5"><br><img src="black_pixel.gif" width="100%" height="1"><br><img
+      src="nothing.gif" width="1" height="5">
+    @html.extend('legacy/categories', function () {})
+		</center>
 	})
 })

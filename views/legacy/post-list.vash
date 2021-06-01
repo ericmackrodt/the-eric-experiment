@@ -1,9 +1,12 @@
+<table bordercolordark="#000000" width="600" bordercolor="#000000" border="0" bgcolor="#FFFFFF" background="/assets/Fine_Speckled0001A16B.gif">
+<tr>
+<td>
 @model.posts.forEach(function (item, index) {
   @{
     var image = item.filename + "/" +item.image;
     var isLast = index === (model.posts.length - 1);
   }
-<table width="550" cellpadding="0" cellspacing="0" border="0">
+<table width="600" cellpadding="0" cellspacing="0" border="0">
     <tr>
       <td width="143" valign="top">
         <a href="/post/@item.filename">
@@ -21,11 +24,11 @@
           </font>
         </a>
         <br><img src="/assets/nothing.gif" width="1" height="5"><br>
-        <font face="arial" size="-1">
+        <font face="arial" size="-1" color="#000000">
           @item.description
         </font>
         <br><img src="/assets/nothing.gif" width="1" height="5"><br>
-        <font size="-1" face="arial" color="#DDDDDD">
+        <font size="-1" face="arial" color="#777777">
           @item.date
         </font>
       </td>
@@ -33,11 +36,14 @@
 
     @if (!isLast) {
       <tr>
-        <td colspan="3" width="550" valign="top">
+        <td colspan="3" width="600" valign="top">
         <img height="10" width="1" src="/assets/nothing.gif"><br>
-        <img height="1" width="550" src="/assets/black_pixel.gif"><br>
+        <img height="1" width="600" src="/assets/black_pixel.gif"><br>
         <img height="10" width="1" src="/assets/nothing.gif"></td>
       </tr>
     }
 </table>
 })
+</td>
+</tr>
+</table>
