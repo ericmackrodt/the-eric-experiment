@@ -51,7 +51,7 @@ app.enable("trust proxy");
 
 function ensureSecure(req: Request, res: Response, next: express.NextFunction) {
   if (
-    req.protocol === "https" ||
+    req.headers["x-forwarded-proto"] === "https" ||
     isLegacy(req) ||
     req.hostname.includes("localhost")
   ) {
