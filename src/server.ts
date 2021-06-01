@@ -47,6 +47,7 @@ function shouldCompress(req: Request, res: Response) {
 }
 
 app.use(compression({ filter: shouldCompress }));
+app.enable("trust proxy");
 
 function ensureSecure(req: Request, res: Response, next: express.NextFunction) {
   if (
