@@ -14,6 +14,7 @@ extension("legacy-headers", function() {
 
             const header = [
               `<font face="arial" size="${size}">`,
+              `<a name="${m2}"></a>`,
               `<b id="${m2}">`,
               m3,
               "</b>",

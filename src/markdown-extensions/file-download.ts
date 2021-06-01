@@ -51,10 +51,12 @@ extension("legacy-file-download", function() {
             content
           );
 
+          const id = name.replace(/[^\w]+/g, "").toLowerCase();
+
           return [
             '<table cellspacing="1" border="0" cellpadding="2" width="470">',
             "<tr>",
-            `<td bgcolor="#777777"><font size="-1" face="arial"><b>${name}</b></font></td>`,
+            `<td bgcolor="#777777"><font size="-1" face="arial"><b><a name="${id}"></a>${name}</b></font></td>`,
             '<td bgcolor="#777777" align="right" valign="top">',
             `<a href="${url}" target="_blank">`,
             '<img src="/img/12/12/floppy.png" alt="Download" border="0">',
