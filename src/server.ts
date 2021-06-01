@@ -49,7 +49,11 @@ function shouldCompress(req: Request, res: Response) {
 app.use(compression({ filter: shouldCompress }));
 
 function ensureSecure(req: Request, res: Response, next: express.NextFunction) {
-  if (req.secure || isLegacy(req) || req.hostname.includes("localhost")) {
+  if (
+    req.protocol === "https" ||
+    isLegacy(req) ||
+    req.hostname.includes("localhost")
+  ) {
     // OK, continue
     return next();
   }
