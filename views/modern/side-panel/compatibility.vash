@@ -1,4 +1,15 @@
 <window window-id="compatibility" v-bind:desktop="sidePanelDesk" title="Compatibility" icon="/assets/folder-icon.png">
-  <img src="/assets/200.gif" width="88" height="31" alt="Compatible with IE" />
-  <img src="/assets/netscap4.gif" alt="Compatible with Netscape" />
+  <div id="compatibility-content">
+    <div class="compatibility-row">
+      Show me the <a href="/enable-oldie">REAL</a> website.
+    </div>
+    <div class="compatibility-row">
+      <a href="/windows3x/essentialsoftware#internetexplorer501">
+        <img src="/assets/200.gif" width="88" height="31" alt="Compatible with IE" />
+      </a>
+      <a href="/windows3x/essentialsoftware#netscapecommunicator407">
+        <img src="/assets/netscap4.gif" alt="Compatible with Netscape" />
+      </a>
+    </div>
+  </div>
 </window>

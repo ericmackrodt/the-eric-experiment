@@ -82,6 +82,16 @@ app.get("/download/:id", async (req, res) => {
   got.stream(downloadUrl).pipe(res);
 });
 
+app.get("/enable-oldie", async (req, res) => {
+  res.cookie("oldie_enabled", true, { maxAge: 999999 });
+  res.redirect(301, "/");
+});
+
+app.get("/disable-oldie", async (req, res) => {
+  res.cookie("oldie_enabled", false, { maxAge: 999999 });
+  res.redirect(301, "/");
+});
+
 app.get("/", home({ tags, categories, posts, mainMenu }));
 app.get("/category", category({ tags, categories, posts, mainMenu }));
 app.get("/tag", tag({ tags, categories, posts, mainMenu }));

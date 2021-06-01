@@ -1,12 +1,6 @@
 import { Request } from "express";
 
-export function isLegacy(req: Request) {
-  const { oldie } = req.query;
-
-  if (oldie) {
-    return true;
-  }
-
+export function isOldBrowser(req: Request) {
   const userAgent = req.useragent;
   if (userAgent.isIE && parseFloat(userAgent.version) < 10) {
     return true;
@@ -20,6 +14,20 @@ export function isLegacy(req: Request) {
   }
 
   return false;
+}
+
+export function isLegacy(req: Request) {
+  const { oldie } = req.query;
+
+  if (oldie) {
+    return true;
+  }
+
+  if (req.cookies["oldie_enabled"] === "true") {
+    return true;
+  }
+
+  return isOldBrowser(req);
 }
 
 export function viewPath(req: Request, view: string) {
