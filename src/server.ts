@@ -47,28 +47,28 @@ function shouldCompress(req: Request, res: Response) {
 }
 
 app.use(compression({ filter: shouldCompress }));
-app.enable("trust proxy");
+// app.enable("trust proxy");
 
-function ensureSecure(req: Request, res: Response, next: express.NextFunction) {
-  if (
-    req.headers["x-forwarded-proto"] === "https" ||
-    isLegacy(req) ||
-    req.hostname.includes("localhost")
-  ) {
-    // OK, continue
-    return next();
-  }
+// function ensureSecure(req: Request, res: Response, next: express.NextFunction) {
+//   if (
+//     req.headers["x-forwarded-proto"] === "https" ||
+//     isLegacy(req) ||
+//     req.hostname.includes("localhost")
+//   ) {
+//     // OK, continue
+//     return next();
+//   }
 
-  console.log(req.originalUrl);
-  console.log(req.url);
+//   console.log(req.originalUrl);
+//   console.log(req.url);
 
-  console.log("https://" + req.hostname + req.url);
-  // handle port numbers if you need non defaults
-  // res.redirect('https://' + req.host + req.url); // express 3.x
-  res.redirect(301, "https://" + req.hostname + req.url); // express 4.x
-}
+//   console.log("https://" + req.hostname + req.url);
+//   // handle port numbers if you need non defaults
+//   // res.redirect('https://' + req.host + req.url); // express 3.x
+//   res.redirect(301, "https://" + req.hostname + req.url); // express 4.x
+// }
 
-app.all("*", ensureSecure); // at top of routing calls
+// app.all("*", ensureSecure); // at top of routing calls
 
 app.set("view engine", "vash");
 
