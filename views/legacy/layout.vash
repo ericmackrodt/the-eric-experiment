@@ -22,12 +22,15 @@
     <img src="/assets/nothing.gif" width="1" height="5"><br>
     <table border="0">
       <tr>
-        <td align="right">
+        <td align="left">
+          <img src="/assets/ani_raptor.gif">
+        </td>
+        <td align="right" valign="bottom">
           <img src="/assets/cat.gif">
         </td>
       </tr>
       <tr>
-        <td>
+        <td colspan="2">
           <img src="/assets/flamingline.gif" width="600">
         </td>
       </tr>
