@@ -7,7 +7,6 @@ import * as sharp from "sharp";
 import { isLegacy } from "./view-path";
 
 async function processImage(req: Request, data: Buffer) {
-  debugger;
   const legacy = isLegacy(req);
   const fit = (req.query.fit || "cover") as
     | "fill"
