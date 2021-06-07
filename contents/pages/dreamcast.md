@@ -58,7 +58,7 @@ Here are the options you have to do that plus the download link for them:
 
 - name: "Dreamshell RC4 4.0"
 - file: "DreamShell_4.0.0_RC4_and_Boot_Loader.7z"
-- url: "/download/1OEjcLbW9oATsBtUOr2xryNCApwm_u2D2"
+- url: "/downloads/dreamcast/DreamShell_4.0.0_RC4_and_Boot_Loader.7z"
 - description:
   This is the option I used, you basically have to burn the boot disk to a blank CD using something like [ImgBurn](#imgburn) and copy the contents of dreamshell to the SD-CARD.
 

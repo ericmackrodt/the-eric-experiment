@@ -74,6 +74,8 @@ app.set("view engine", "vash");
 
 app.use("/assets", express.static("assets"));
 
+app.use("/downloads", express.static("downloads"));
+
 images(app);
 
 app.get("/download/:id", async (req, res) => {
