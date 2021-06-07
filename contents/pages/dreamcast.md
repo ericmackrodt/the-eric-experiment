@@ -69,30 +69,33 @@ I found that I had the best luck with 16gb or smaller sd-cards and formatting th
 
 - name: "Dreamcast SD Rip v1.1 by jj1dom"
 - file: "Dcsdrip11.zip"
-- url: "/download/1ilyUATC5o5pfpfxIlYHleKSp0fvfc-Vm"
+- url: "/downloads/dreamcast/Dcsdrip11.zip"
 - description:
   This is another option for ripping games, it has better feedback of the ripping process compared to Dreamshell, but you need to dump the files on your computer everytime you finish ripping a game as this piece of sofware dumps all the files to the root folder of the sd-card.
 
-Another cool thing this software can do is backup the bios of your Dreamcast, which you can use in emulators or you can restore it if you installed another bios.
+  Another cool thing this software can do is backup the bios of your Dreamcast, which you can use in emulators or you can restore it if you installed another bios.
+
 [/file-download]
 
 [file-download]
 
 - name: "SD Card Formatter"
 - file: "SD Card Formatter 5.0.1 Setup.zip"
-- url: "/download/1u28U5sQW1LVusSKnfXWkNOd8c2A7yDo1"
+- url: "/downloads/dreamcast/SD Card Formatter 5.0.1 Setup.zip"
 - description:
   This is the sd card formatter that is availble in the official [sdcard.org](https://www.sdcard.org/) website. I could only boot Dreamshell after formatting the sd-card with this tool. You can also download it from [here](https://www.sdcard.org/downloads/formatter/).
-  [/file-download]
+
+[/file-download]
 
 [file-download]
 
 - name: "ImgBurn"
 - file: "SetupImgBurn_2.5.8.0.zip"
-- url: "/download/1g7K7I3GZHsT_Nr2FkCQS_0mANjDj4cdZ"
+- url: "/downloads/dreamcast/SetupImgBurn_2.5.8.0.zip"
 - description:
   This is ImgBurn, the software I used to burn the images on the CDs. You can also download it from its official website [here](https://www.imgburn.com/).
-  [/file-download]
+
+[/file-download]
 
 ### Preparing GD-EMU after ripping games
 
@@ -102,19 +105,21 @@ You can prepare the GD-EMU sd card by using the SD CARD MAKER for GDEMU availabl
 
 - name: "SD CARD MAKER for GDEMU V1.10"
 - file: "GDEMU_SD.rar"
-- url: "/download/14ALZgKgaQwdkYdnycFD28_kZ_sk2uEKr"
+- url: "/downloads/dreamcast/GDEMU_SD.rar"
 - description:
   This is the software that you can use to prepare the sd card for the GD-EMU with the menu as well as vga and region patches.
-  [/file-download]
+
+[/file-download]
 
 [file-download]
 
 - name: "Ugly GDEmu Games Manager"
 - file: "UGGM_0_7_1.7z"
-- url: "/download/1OmZO_C5WeIEqfNBFP2hXPCXWO8gPE_N5"
+- url: "/downloads/dreamcast/UGGM_0_7_1.7z"
 - description:
   This is another option for setting up your GDEMU sd-card, I haven't tested this one but it seems that it is also able to shrink the size of your gdi images by removing the dummy files from them. You can check out the project page [here](https://github.com/Louhike/Ugly-GDEmu-Games-Manager).
-  [/file-download]
+
+[/file-download]
 
 ## Favorite Games
 
