@@ -28,7 +28,7 @@
     "front-matter": "^4.0.2",
     "got": "^11.8.2",
     "luxon": "^1.25.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "query-string": "^6.13.1",
     "rimraf": "^3.0.2",
     "sass": "^1.26.10",
